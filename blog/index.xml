@@ -1,0 +1,398 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on PracticallyProductivity</title>
+        <link>https://rayes0.github.io/blog/</link>
+        <description>Recent content in Posts on PracticallyProductivity</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Thu, 10 Dec 2020 10:36:54 -0700</lastBuildDate>
+        <atom:link href="https://rayes0.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Managing Dotfiles with Bare Git</title>
+            <link>https://rayes0.github.io/blog/dotfiles/</link>
+            <pubDate>Thu, 10 Dec 2020 10:36:54 -0700</pubDate>
+            
+            <guid>https://rayes0.github.io/blog/dotfiles/</guid>
+            <description>I recently created a public dotfiles repository on my Github (which you can find here). Previously, I used a private git repo to back up my files, but I wanted to share some of my configurations so I decided to make it public.
+Backing up your dotfiles using git has many advantages. For example, it will enable you to have version control, and be able to easily rollback to previous versions if your config breaks.</description>
+            <content type="html"><![CDATA[<p>I recently created a public dotfiles repository on my Github (which you can find <a href="https://github.com/rayes0/dotfiles">here</a>). Previously, I used a private git repo to back up my files, but I wanted to share some of my configurations so I decided to make it public.</p>
+<p>Backing up your dotfiles using git has many advantages. For example, it will enable you to have version control, and be able to easily rollback to previous versions if your config breaks. It will also enable the ability to quickly pull the files onto any system. Alternatives such as a special dotfiles manager also typically requires the installation of another piece of software, which is not always desirable.</p>
+<p>In this article, I will show you how I back up and store my dotfiles. I will assume that you have a basic understanding of how git works, and that you also know a couple basic commands.</p>
+<h2 id="creating-the-repo">Creating the Repo</h2>
+<p>The following will create a bare git repository in the directory <code>$HOME/repos/dotfiles</code>. You can change this to whatever directory you like, just make sure the directory exists before you initialize the repo.</p>
+<pre><code>git init --bare $HOME/repos/dotfiles
+alias dots='/usr/bin/git --git-dir=$HOME/repos/dotfiles --work-tree=$HOME
+dots config --local status.showUntrackedFiles no
+</code></pre><p>I suggest you put the alias in a file run by your shell on startup (eg: ~/.bashrc, ~/.zshrc, etc.). That way, you won&rsquo;t have to manually create the alias every time you need to update the repository.</p>
+<p>Okay, now that our repo is set up, add a remote origin with the following command, replacing the url with your own remote git repository.</p>
+<pre><code>dots remote add origin you@yourgit.com/dotfiles.git
+</code></pre><p>Now our repository is ready, and we can add some files to track. For example:</p>
+<pre><code>dots add .Xresources .bashrc
+</code></pre><p>You can now add any files you want to track, as long as it is in your <code>$HOME</code> directory. Once you&rsquo;ve got some files, you can commit and push your changes.</p>
+<pre><code>dots commit -m &quot;Some cool name&quot;
+dots push
+</code></pre><h2 id="pulling-to-another-system">Pulling To Another System</h2>
+<p>Here&rsquo;s how to pull the dotfiles onto another system.</p>
+<p>First, clone the bare repo to the <em><strong>same location</strong></em> as the repo on the original system. You must clone to the same location because git will track the filepaths relative to the path in which you first initialized the repo. Eg: If you initialized the repo in <code>$HOME/repos/dotfiles</code>, and you add a file named <code>$HOME/.Xresources</code>, git will see the location of that file as <code>../../.Xresources</code>.</p>
+<pre><code>git clone --bare https://yourgit.com/reponame.git $HOME/repos/dotfiles
+</code></pre><p>After cloning, define the same alias as before, and also add it to a file loaded by your shell.</p>
+<pre><code>alias dots='/usr/bin/git --git-dir=$HOME/repos/dotfiles --work-tree=$HOME
+</code></pre><p>Now to apply the changes from the remote repo to our system, run the following command. If you already have files with the same paths as the ones on your remote repo, the command will error out. To fix this, just remove/rename those files.</p>
+<pre><code>dots checkout -f
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>Time Management on Linux</title>
+            <link>https://rayes0.github.io/blog/time-management-linux/</link>
+            <pubDate>Mon, 16 Nov 2020 16:09:52 -0700</pubDate>
+            
+            <guid>https://rayes0.github.io/blog/time-management-linux/</guid>
+            <description>As a student, I need to keep up with a constant influx of assignments and tests. I also need to manage my personal life outside of school, and make time for hobbies which I enjoy. Sometimes, keeping up with everything gets hard. These past couple months have really tested my time management skills, due to the extra COVID restrictions meaning that I had to take online classes. This gave me more freedom of when to complete my work, but also numerous more distractions.</description>
+            <content type="html"><![CDATA[<p>As a student, I need to keep up with a constant influx of assignments and tests. I also need to manage my personal life outside of school, and make time for hobbies which I enjoy. Sometimes, keeping up with everything gets hard. These past couple months have really tested my time management skills, due to the extra COVID restrictions meaning that I had to take online classes. This gave me more freedom of when to complete my work, but also numerous more distractions.</p>
+<p>In order to keep up with all the deadlines for the at-home classes, I needed some system to discipline myself. I find that if I don&rsquo;t use an external system, I have no way to keep myself accountable for when to complete tasks.</p>
+<h3 id="tools">Tools</h3>
+<p>Here are some of the tools which I use to manage my time. All of these are completely FOSS software and should be available in most distribution repositories.</p>
+<h4 id="goodtime">Goodtime</h4>
+<figure>
+    <img src="/img/goodtime.jpg" height="400px"/> 
+</figure>
+
+<p>Goodtime is a pomodoro timer application for Android. Although this is &ldquo;supposed&rdquo; to be a list of linux-specific applications, Goodtime is so good that it deserves to be included anyways.</p>
+<p>This is probably by far my most-used productivity application. The pomodoro method really helps to get me started on a repulsive task. By putting on a timer, it helps to keep me accountable for working for at least a reasonable amount of time. I often find myself working longer than the 25 minutes (which I typically use, 5 minutes longer than a traditional pomodoro).</p>
+<p>You can download an apk file either from the F-Droid or through this Github repository: <a href="https://github.com/adrcotfas/Goodtime/">https://github.com/adrcotfas/Goodtime/</a></p>
+<h4 id="calcurse">Calcurse</h4>
+<figure>
+    <img src="/img/calcurse.png" height="400px"/> 
+</figure>
+
+<p>A calendar application is essential to keeping productive. I use Calcurse as my calendar application of choice. Calcurse is ncurses-based calendar which runs in your terminal. It takes a little bit of getting used to if you are used to graphical calendar applications, but it is well worth it.</p>
+<p>Calcurse contains everything you would expect from a desktop calendar application, including a todo list, advanced event repetition, reminders, and syncing across devices.</p>
+<p>A couple reasons I like Calcurse:</p>
+<ul>
+<li>Keyboard driven, everything is done through the keyboard. This takes time to get used to but when you do get fluent with the shortcuts, adding and editing events becomes so much faster</li>
+<li>Built in todo list with priority sorting</li>
+<li>Ability to customize reminders with your own custom commands</li>
+<li>Very efficient on resources, a big bonus if you have your calendar running in the background all day like me</li>
+</ul>
+<p>Check out more information at their website <a href="https://www.calcurse.org/">here</a></p>
+<h4 id="minder">Minder</h4>
+<figure>
+    <img src="/img/minder.png" height="400px"/> 
+</figure>
+
+<p>Mind maps are very helpful for organizing information in your brain. Minder is a GTK-based mind mapping application originally designed for Elementary OS, however is also included in the repos of a variety of other distributions.</p>
+<p>Some things I think makes Minder stand out among alternatives:</p>
+<ul>
+<li>Keyboard driven. I am a very big fan of using the keyboard over a mouse. It really helps your productivity by a ton (trust me!).</li>
+<li>Customizable. You can change many nuances such as the color scheme, how branches are displayed, etc.</li>
+<li>Ability to add detailed notes. Can be a plus if you want to categorize a large amount of information into chunks</li>
+</ul>
+<p>Minder is hosted at <a href="https://github.com/phase1geo/Minder">this</a> Github repository</p>
+<h4 id="zim">Zim</h4>
+<figure>
+    <img src="/img/zim.png" height="400px"/> 
+</figure>
+
+<p>I have tried numerous note-taking applications in the past, but I always keep coming back to Zim. Although it was designed to be used to create a personal wiki, you can use Zim for basically any form of writing, be it a website, journaling, tracking your tasks, etc.</p>
+<p>Zim is a truly powerful piece of software. On its own, it is already quite nice, with customizable colors, customizable keyboard shortcuts for nearly everything, checkbox lists, and wiki syntax. However, where Zim really shines is with plugins, which can enable functionalities such as the ability to render LaTeX, markdown, or even Lilypond music notation. You can create a journal with the journal plugin, do calculations, draw plots, use version control for notes, add a table of contents and tags, the possibilities are endless.</p>
+<p>Zim also has powerful export options and you can use html templates to create an entire website if you want, much like a static site generator</p>
+<p>You can find out more information at their <a href="http://zim-wiki.org/">website</a> or their <a href="https://github.com/zim-desktop-wiki/zim-desktop-wiki">Github repository</a>.</p>
+<h4 id="anki">Anki</h4>
+<figure>
+    <img src="/img/anki.png" height="400px"/> 
+</figure>
+
+<p>Although more of a study tool than a productivity application, Anki is an indespensible tool. Not only does it create a clear daily study schedule, but it implements spaced repetition with its research-backed algorithm designed to match your brain&rsquo;s ability to absorb information.</p>
+<p>It&rsquo;s no stretch to say that almost 85%+ of my study time is spent reviewing Anki flashcards, it&rsquo;s been so effective for me that it&rsquo;s nearly replaced the traditional &ldquo;read, practice, repeat&rdquo; cycle most students are used to. That&rsquo;s because it does all three of these in possibly the most efficient way we will ever be able to do it.</p>
+<p>You can download Anki from their website <a href="https://apps.ankiweb.net/">here</a></p>
+<h4 id="conclusion">Conclusion</h4>
+<p>Well, these are some of the tools which I personally use in managing my time, or studying more efficiently. I hope that some of these programs piqued your curiosity and I highly encourage you to check them out. I have a particular workflow that I use to learn topics for classes which incorporates all of these programs together. Stay tuned for a future article on that.</p>
+<p>Enjoy being more productive!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Reasons to still use IRC in 2020</title>
+            <link>https://rayes0.github.io/blog/irc/</link>
+            <pubDate>Mon, 05 Oct 2020 20:19:28 -0600</pubDate>
+            
+            <guid>https://rayes0.github.io/blog/irc/</guid>
+            <description>IRC (Internet Relay Chat) is now considered a grandfather of instant messaging protocols. Having been around since 1988, it&amp;rsquo;s nearly as old as email. Back in the day, there was an IRC community for almost anything you could think of. However, the number of users of this protocol has been steadily declining since 2003. It&amp;rsquo;s lost about 60% of users since then.
+I think there are a couple reasons for this decline.</description>
+            <content type="html"><![CDATA[<p>IRC (Internet Relay Chat) is now considered a grandfather of instant messaging protocols. Having been around since 1988, it&rsquo;s nearly as old as email. Back in the day, there was an IRC community for almost anything you could think of. However, the number of users of this protocol has been steadily declining since 2003. It&rsquo;s lost about 60% of users since then.</p>
+<p>I think there are a couple reasons for this decline.</p>
+<p>Development on the IRC protocol itself is not very fast, and lacks many modern features which some users would expect of an instant messenger. For example, though it is possible to send images and files (through DCC), it isn&rsquo;t very clean compared to the way modern messengers do it. DCC is also not very secure and vulnerabilities have been found.</p>
+<p>Also many of the channels on IRC have moved over to Discord, an extremely popular IRC-like messenger.</p>
+<p>Contrary to popular opinion, though, I wouldn&rsquo;t say IRC is &lsquo;dead&rsquo;. For example, Twitch uses IRC and is quite popular. And some IRC servers still have a fairly large userbase (eg: Freenode).</p>
+<p>So, why should we keep on using IRC? What advantages does it have to offer?</p>
+<p><strong>1. IRC is extremely lightweight, fast and low bandwidth.</strong> There is little to nearly no perceivable delay when sending messages through IRC. Handling large channels with hundreds of participants is easier because of the small bandwidth consumption.</p>
+<p><strong>2. IRC is a universal protocol.</strong> Every single operating system (including mobile ones) has the capability to use IRC. You can even use it without a graphical interface. There&rsquo;s tons of clients available to choose from as well.</p>
+<p><strong>3. It&rsquo;s easy to run a server and works basically out of the box.</strong> Any person with the hardware can run an IRC server without much hassle.</p>
+<p><strong>4. Fully open source.</strong> A requirement for privacy-conscious geeks out there like me.</p>
+<p><strong>5. Moderation is easy and intuitive.</strong> You can clearly define roles, invite/kick people in the channel, make channels private, etc.</p>
+<p><strong>6. Extremely versatile and extensible.</strong> There is a wealth of plugins for IRC which add many desirable functionalities. Bots are also easy to make.</p>
+<p>So there are some reasons to still use IRC. I use it almost daily for a variety of purposes including general chatting, entertainment (there&rsquo;s tons of IRC based games out there), and tech help when I need it. There&rsquo;s tons of helpful people out there who will be available for instant help. I have also met some really great people in general from all over the world.</p>
+<p>IRC may be declining in use, but there&rsquo;s still some very good reasons that it shouldn&rsquo;t be left in the dust. If you&rsquo;ve never chatted on IRC before, I encourage you to download a client and connect to a server. Happy chatting!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>My Experience With Vimwiki as a Personal Wiki</title>
+            <link>https://rayes0.github.io/blog/vimwiki/</link>
+            <pubDate>Sun, 13 Sep 2020 18:08:46 -0600</pubDate>
+            
+            <guid>https://rayes0.github.io/blog/vimwiki/</guid>
+            <description>For the past couple days, I&amp;rsquo;ve been wanting to set up a personal wiki. From my understanding, personal wikis were a big fad in the earlier 2000&amp;rsquo;s, and have now died out. Perhaps the reason for this could have been the emergence of more popular note taking formats rather than wiki syntax, or because the rise of large-scale information databases like Wikipedia left users thinking that wikis are not suitable for personal use.</description>
+            <content type="html"><![CDATA[<p>For the past couple days, I&rsquo;ve been wanting to set up a personal wiki. From my understanding, personal wikis were a big fad in the earlier 2000&rsquo;s, and have now died out. Perhaps the reason for this could have been the emergence of more popular note taking formats rather than wiki syntax, or because the rise of large-scale information databases like Wikipedia left users thinking that wikis are not suitable for personal use.</p>
+<p>So, I decided to try it. After all, what was there to lose but a bit of time? I started looking into options to create my wiki, of which there are many good FOSS ones out there. Here is a list of the main ones I considered and a little about them:</p>
+<ul>
+<li><a href="https://www.mediawiki.org/wiki/MediaWiki">Mediawiki</a> - This one is extremely popular and runs tons of websites. It can be used as a content management system similar to Wordpress or Drupal. Mediawiki is the software which powers Wikipedia and other large wikis.</li>
+<li><a href="https://www.dokuwiki.org/dokuwiki">Dokuwiki</a> - Similar to Mediawiki except it doesn&rsquo;t use a database.</li>
+<li><a href="https://tiddlywiki.com/">Tiddlywiki</a> - Designed to be a personal wiki, as well as aiming to be easy to customize. Information can be reused by dividing it into <em>Tiddlers</em>.</li>
+<li><a href="https://zim-wiki.org/">Zim</a> - The best for those who want a more modern note taking app (like Joplin or Tomboy) but also support for wiki syntax. It has a WYSIWYG editor and is easily configurable and extendable through plugins.</li>
+</ul>
+<p>In the end, I decided to go with none of these, instead using vim with the <a href="https://vimwiki.github.io/">vimwiki</a> plugin. There are a couple reasons I did this:</p>
+<ul>
+<li>Firstly, I didn&rsquo;t want to have a database. I wanted my notes as regular .wiki files which I can sync, convert, and take wherever, as well as open in other applications. Vimwiki is probably the fastest and easiest option for this, though Dokuwiki also does this elegantly.</li>
+<li>Secondly, Vim is lightweight enough to open extremely large files with little delay and memory consumption compared to other editing options. This was the main reason I chose vimwiki over Dokuwiki.</li>
+<li>Thirdly, I wanted to keep my system minimal and since I already had vim (specifically neovim) on my system, all I needed to do was install the vimwiki plugin.</li>
+</ul>
+<p>So far, I&rsquo;m very happy with this plugin and am glad I chose Vimwiki. I used the default Vimwiki syntax as I had used Zim before and the syntax is similar. Although there is an option to use Mediawiki or markdown syntax with Vimwiki, there is no built in export to html support, although you can use other tools such as Pandoc. Since I didn&rsquo;t want the hassle, I decided to go with the native format.</p>
+<p>Here&rsquo;s how I structure my wiki. At the top level directory, I have one &lsquo;master&rsquo; index file and a variety of subdirectories representing large categories such as general notes, programming, software, etc. Each subdirectory also has a separate index file along with a mix of other notes and subdirectories. All separate subdirectories have an index file inside of them.</p>
+<p>I rarely touch my top level &lsquo;master&rsquo; index file. This file links to the index files of main subdirectories located in the top level. Those other index files are the ones actually linking to articles. This allows me to have a hierarchical structure to my notes.</p>
+<p>So that is my setup with Vimwiki. I am still a relatively new user of this plugin, so I still have a lot of learning to do. I very much enjoy having a personal wiki and hope that with whatever wiki option you use, you will have a neat and organized information database that serves you for years to come.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Digital Minimalism - Less is more</title>
+            <link>https://rayes0.github.io/blog/digital-minimalism/</link>
+            <pubDate>Fri, 11 Sep 2020 17:10:13 -0600</pubDate>
+            
+            <guid>https://rayes0.github.io/blog/digital-minimalism/</guid>
+            <description>A couple months ago, I noticed that my computer was not performing as good as it used to. There were noticably longer boot times and it took longer to do certain tasks that used to be lightning fast. Nothing notable had changed with the way I used it. I didn&amp;rsquo;t install any CPU intensive programs and my workflow was the same as before. At first, I attributed it to the fact that the hardware was getting old.</description>
+            <content type="html"><![CDATA[<p>A couple months ago, I noticed that my computer was not performing as good as it used to. There were noticably longer boot times and it took longer to do certain tasks that used to be lightning fast. Nothing notable had changed with the way I used it. I didn&rsquo;t install any CPU intensive programs and my workflow was the same as before. At first, I attributed it to the fact that the hardware was getting old. However, when I did a full reinstall of Fedora 32, I noticed the speed jack up again.</p>
+<p>This led me to think that the performance hit I had earlier wasn&rsquo;t due to the hardware, but actually to the software. A quick search confirmed my thoughts. Although processors do wear out over time, the time taken for the processor to take significant wear is (at least in most times), longer than the usable life span of the computer. The processor is not the first thing to wear out. Plus my computer was fairly new, so I didn&rsquo;t think that was the problem.</p>
+<p>So, I decided to keep my computer as minimal as possible from now on. Here are some benefits to digital minimalism which I heard of:
+- More secure. Less bloat = Less bugs and security holes
+- Easier to maintain and keep track of
+- Less disk space used
+- Performance gains</p>
+<p>Keeping a minimal system usually starts at the install. Although the default install for most linux distributions is already significantly more minimal than Windows or OSX, there are still a lot of packages that you will probably never use, or only use very occasionally.</p>
+<p>To fix this, I went with the minimal install option on the Fedora live CD. This option is available if you go to the official Fedora website download page and click on &lsquo;Alternative Downloads&rsquo;. Choose the &ldquo;Everything&rdquo; iso option. This will enable you to customize the install to only specific package groups.</p>
+<p>I partitioned my disks, created a user and root password, and did the usual Linux install tasks. For the packages, I checked the minimal install and Xorg server options which will only install the packages that you need for a running console environment, and also the barebones X Window system to save us some pains later.</p>
+<p>After the install, I booted up the new system and installed a window manager. Since I already had the installer install Xorg for me, I didn&rsquo;t need to hunt for missing dependencies and most things worked right out of the box.</p>
+<p>I use a standalone window manager rather than a full-fledged desktop environment due to the fact that it is significantly more minimal. There is typically little to no dependencies on top of the already installed X server and I am also a big keyboard user so I need keybindings for managing windows.</p>
+<p>I currently use spectrwm, so I installed that and then upgraded the system. I rebooted and started the X server, migrated my dotfiles, and that was it. I have a pretty bare bones, minimal system.</p>
+<p>After the install, keeping the system minimal is also hard work. I use CLI for doing things as often as I can, for almost all applications except those where I need strong graphics support (eg: web browsing, watching videos, image manipulation, etc.). GUI applications include a GUI, which is going more bloat and pull in more dependencies than a CLI counterpart.</p>
+<p>Here is the list of the main applications I currently use:</p>
+<p>CLI:</p>
+<ul>
+<li>Calcurse (calendar)</li>
+<li>Neovim (text editor)</li>
+<li>Weechat (IRC client)</li>
+<li>Ranger (file manager)</li>
+<li>Tmux (multiplexer)</li>
+<li>Cmus (music player)</li>
+</ul>
+<p>GUI:</p>
+<ul>
+<li>Firefox (web browsing)</li>
+<li>GIMP + Inkscape (graphics)</li>
+<li>Libreoffice writer + mupdf (certain documents where nvim is impractical)</li>
+<li>mpv (video player)</li>
+<li>Anki (flashcards)</li>
+</ul>
+<p>Those are the main applications I use. If I need others for a specific, one time thing, I will use it in a virtual machine I set up (qmenu + kvm).</p>
+<p>To keep my system clean, I make sure to mark packages that aren&rsquo;t needed (eg: build deps) as automatically installed by using <code>dnf mark remove &lt;package names&gt;</code>. To list packages which you manually installed, use <code>dnf repoquery --userinstalled</code>. I also run <code>dnf autoremove</code> fairly regularly as well.</p>
+<p>And that is how I keep a minimal system on Fedora. You may be asking: If you want minimalism, why don&rsquo;t you use another distro like Arch or Gentoo (or LFS if your really ambitious) where you can choose everything you want, or something else like Alpine Linux which is lightweight by default?</p>
+<p>The answer is a combination of many factors. I like the dnf package manager in Fedora. Fedora is relatively low hassle to set up compared to Arch or Gentoo, and the base system has a good balance of stability and bleeding edge. The repos also have strict filtering for software which is not completely FLOSS, which I think is a good thing because you can always add a repo or build from source if you need more software.</p>
+<p>So that is my current Fedora install and setup. It works great and I have had no regrets since installing it. Go digital minimalism!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Do you really have nothing to hide online?</title>
+            <link>https://rayes0.github.io/blog/nothing-to-hide/</link>
+            <pubDate>Wed, 09 Sep 2020 13:51:52 -0600</pubDate>
+            
+            <guid>https://rayes0.github.io/blog/nothing-to-hide/</guid>
+            <description>Whenever I tell someone that they should worry more about their privacy online, the is almost always: &amp;ldquo;I don&amp;rsquo;t need privacy because I have nothing to hide.&amp;rdquo;
+This argument may seem fine, but what they are saying is probably as true as it seems. Everyone has things they want to keep hidden, both online and from their personal lives. There are things you don&amp;rsquo;t want others to see, moments in life which you are embarrassed about, I guarantee it.</description>
+            <content type="html"><![CDATA[<p>Whenever I tell someone that they should worry more about their privacy online, the is almost always: &ldquo;I don&rsquo;t need privacy because I have nothing to hide.&rdquo;</p>
+<p>This argument may seem fine, but what they are saying is probably as true as it seems. Everyone has things they want to keep hidden, both online and from their personal lives. There are things you don&rsquo;t want others to see, moments in life which you are embarrassed about, I guarantee it.</p>
+<p>When ever someone uses the &ldquo;nothing to hide&rdquo; argument against me. I will calmly ask them to hand me all their passwords to all the online services they actively use, including social media. I tell them that I will copy all the data from these platforms, retain it indefinitely, sell it for profit, and perhaps publish it if the situation calls for it. After all, if they have nothing to hide, then they would be fine with me looking right?</p>
+<p>They are usually a little fazed by that, but nonetheless, they reply: &ldquo;How can I trust that you won&rsquo;t do anything harmful to my accounts? Like send spam to my contacts, delete my info, ex.&rdquo;</p>
+<p>I say: &ldquo;Lets say I hypothetically didn&rsquo;t do that (though I would have the power to). Would you still be okay with it?&rdquo;</p>
+<p>I haven&rsquo;t met a single person who said yes to that.</p>
+<p>Some people will say: &ldquo;Well, I just want to keep it from people I know, i&rsquo;m fine with the government looking for security purposes.&rdquo;</p>
+<p>My response:</p>
+<p>&ldquo;Innocent until proven guilty&rdquo;. This is a very well known legal right. The government should treat you as inncoent unless they have hard, solid evidence for you to be guilty. They should only start looking when they have reasonable evidence to look.</p>
+<p>Also, you don&rsquo;t know what the government, NSA, &ldquo;Big Five&rdquo;, etc. does with your data. Your data is being collected in secret. It would be a different matter if you were allowed to consent to it, but as you are not, you are clueless about what is actually happening after your data is processed. For what reason are they collecting your data (can you be so sure its only about security?), what are they doing with it, and are they sharing it with anyone else? These are questions which you cannot answer.</p>
+<p>Some obstinate individuals will still remain unconvinced at this point. I bring up this quote:</p>
+<blockquote>
+<p>&ldquo;Ultimately, saying that you don&rsquo;t care about privacy because you have nothing to hide is no different from saying you don&rsquo;t care about freedom of speech because you have nothing to say. Or that you don&rsquo;t care about freedom of the press because you don&rsquo;t like to read. Or that you don&rsquo;t care about freedom of religion because you don&rsquo;t believe in God. Or that you don&rsquo;t care about the freedom to peacably assemble because you&rsquo;re a lazy, antisocial agoraphobe.&rdquo;</p>
+<ul>
+<li>Edward Snowden in <em>Permanent Record</em></li>
+</ul>
+</blockquote>
+<p>Some people have legitimiate and legal things they do which they want to hide, and even if you don&rsquo;t care, at least spare a thought for others and still argue on the side of privacy.</p>
+<p>So, in the end, there really is no reasonable premise for the collection fo your data. Here is a better way to put the &ldquo;Nothing to Hide&rdquo; argument:</p>
+<blockquote>
+<p>&ldquo;If you have nothing to hide, they have no reason to look.&rdquo;</p>
+<ul>
+<li>The Hated One, privacy youtube channel</li>
+</ul>
+</blockquote>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Spaced Repetition</title>
+            <link>https://rayes0.github.io/blog/spaced-repetition/</link>
+            <pubDate>Tue, 08 Sep 2020 19:50:53 -0600</pubDate>
+            
+            <guid>https://rayes0.github.io/blog/spaced-repetition/</guid>
+            <description>If your a student, you may have heard of a piece of software called Anki. Anki is one of the two big SRS programs out there right now.
+In this post, I will try explain what SRS is to those unfamiliar with it and why it can be a really powerful tool for learning pretty much anything.
+SRS stands for spaced repetition software. Spaced repetition is a study technique where you &amp;ldquo;space out&amp;rdquo; your repetition of the material over time, with the intervals getting larger with every repetition.</description>
+            <content type="html"><![CDATA[<p>If your a student, you may have heard of a piece of software called Anki. Anki is one of the two big SRS programs out there right now.</p>
+<p>In this post, I will try explain what SRS is to those unfamiliar with it and why it can be a really powerful tool for learning pretty much anything.</p>
+<p>SRS stands for spaced repetition software. Spaced repetition is a study technique where you &ldquo;space out&rdquo; your repetition of the material over time, with the intervals getting larger with every repetition.</p>
+<p>So, what&rsquo;s the big deal about that, you ask? Well, spaced repetition is one of the most (if not the most) efficient ways to study. I will explain why.</p>
+<p>Our brains forget information following a specific pattern called the <a href="https://en.wikipedia.org/wiki/Forgetting_curve">forgetting curve</a>. Basically, we forget things gradually, with the percentage of the information retained exponentially becoming less and less. The more repetitions of something we do, the slower this decline becomes. This is why if you do something over and over again, you remember it for longer.</p>
+<p>The most important and most overlooked stage of the learning process is actually forgetting. This is due to something called the effort principle, which just means that the more effort you have to go through to learn something, the better your mind will retain it.</p>
+<p>The goal behind spaced repetition is that you review something right before you are about to forget it. This lets your mind go through the maximum possible effort to remember what you are studying. This way, you will save time as you will do the least repetitions of the material but still retain the most possible information.</p>
+<p>If the interval between reviews of the material is too short, then you are wasting too much time with unneeded repetitions because you will not have had the chance to forget some of the material before reviewing it again.</p>
+<p>On the other hand, if your intervals are too long, you will have already forgotten the material and may not be able to recall it without looking at some external reference. You will then have to spend time relearning the material which will take up too much time.</p>
+<p>This may seem like a small nuance, but think of how this will compound with every single piece of information you need to know for an exam, or with 500+ flashcards (if you take 10 extra seconds to memorize every card, that adds up to around 83 minutes <em>extra</em> added with the time it takes to review the cards themselves)</p>
+<p>The easiest way to implement spaced repetition is with flashcards: Physical flashcards, and software methods.</p>
+<p>With physical flashcards you can use the Leitner system. The idea is to group your flashcards (with boxes or some other way) into groups based on the time they will be reviewed. Have one box due for 10 min or so, another for the next day, another for three days, a week, a month, and so on. You can customize these intervals to your liking. If you get a card right, move it up one group to the next longest interval. If you get a card wrong, move it down one group.</p>
+<p>There are two major well-known software based methods of implementing spaced repetition: Anki and Supermemo. These are both based off of a tried and tested computer algorithm which tries to match your brain&rsquo;s ability to remember things. Anki is open source, and has a wealth of extensions, pre-made decks, and a large community. If there is something you want to do in Anki, chances are there is probably a way to do it. Supermemo is closed source and has a supposedly more advanced version of algorithm than Anki. For privacy and open source geeks like me, Anki is the clear winner. And you can do everything you can do in Supermemo (plus more) in Anki (except for the algorithm).</p>
+<p>I will talk more about how Anki works and how to use it in future posts. This post was just meant as a introduction to spaced repetition and why it is so efficient. Before I heard about it, I would struggle for hours trying to memorize a couple terms. Now I can do a whole semesters worth of terms with just 10 min a day doing my Anki cards. Spaced repetition is also not just limited to academic uses. I use Anki to learn languages, memorize common programming stuff, and for fun as well. For example, I memorized the NATO phonetic alphabet and all the elements of the periodic table with their respective atomic numbers, and am currently going through all the capitals, flags, and maps of every country.</p>
+<p>I hope that this was a good introduction to spaced repetition and the various ways to implement it. It can truly be a really powerful way to learn new information.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Terminal Emulators</title>
+            <link>https://rayes0.github.io/blog/terminal-emulator/</link>
+            <pubDate>Mon, 07 Sep 2020 19:12:10 -0600</pubDate>
+            
+            <guid>https://rayes0.github.io/blog/terminal-emulator/</guid>
+            <description>Arguably one of the most important aspects of Linux is the terminal emulator. Especially on a minimal system, the terminal emulator is going to easily be one of your most used pieces of software.
+Over the course of my computing life with linux, I have used many different terminal emulators. I started off with gnome terminal, the default terminal in my installation. When I started using a standalone window manager instead of a full fledged desktop environment, I moved to alacritty due to the fact that it was GPU accelerated, meaning it would be faster.</description>
+            <content type="html"><![CDATA[<p>Arguably one of the most important aspects of Linux is the terminal
+emulator. Especially on a minimal system, the terminal emulator is
+going to easily be one of your most used pieces of software.</p>
+<p>Over the course of my computing life with linux, I have used many
+different terminal emulators. I started off with gnome terminal, the
+default terminal in my installation. When I started using a standalone
+window manager instead of a full fledged desktop environment, I moved to
+alacritty due to the fact that it was GPU accelerated, meaning it would be
+faster. I then moved to kitty, specifically to test out the kittens
+feature for a while.</p>
+<p>Right now, the terminal emulator I use is Uxterm. I will explain why in
+a second. First, let me tell you some of the criteria that are important
+for a terminal emulator. Keep in mind that this is my personal preference
+and it may differ from what you think/want/need.</p>
+<p>Typing latency is the biggest factor for me when using
+a terminal. By typing latency, I mean the delay between when the key is pressed to when it shows up on the screen. I would prefer
+a terminal with a lower tying latency over more features, because the main
+thing I will be doing in the terminal is typing. Extra features can be
+a great plus, but I would rather have a terminal that is tailored for what
+it is supposed to do, that is, process my tying and send it to the kernel.
+I use vim to write most of my documents (including this one), so it is
+important for me to have a terminal which is good in this aspect.</p>
+<p>Uxterm has one of the lowest typing latencies out of the many terminals
+out there (for some formal tests, check <a href="https://lwn.net/Articles/751763/">here</a>). For
+those of you that think a couple milliseconds of typing latency doesn&rsquo;t
+really matter, check out <a href="https://doi.org/10.1080/00140137608931531">this
+study</a>. If your still not
+convinced, open up a resource-heavy word processing software (eg: libreoffice) and
+type something. Switch to a tty or xterm and type again. Notice
+a significant difference? Typing in a terminal with minimal typing latency
+will enable you to achieve greater speeds as well as better accuracy.</p>
+<p>Since Uxterm is just xterm with support for unicode characters, I will
+just refer to it as xterm from now on for the sake of simplicity.</p>
+<p>After typing latency, I look for the ability to customize features to my liking. Although
+xterm is not the best looking terminal out of the box, it can be
+customized extensively via the ~/.Xresources file. You can change the
+colours, font, and many behavioural aspects of the terminal from the file. Xterm may be old software, but it still has quite advanced features not found in many other terminals. So for those who want to show off your geek skills to non-UNIX users, this terminal won&rsquo;t hold you back.</p>
+<p>Now for the downsides:</p>
+<p>The only feature that xterm is really missing in terms of looks is native background transparency, although I have seen it hacked into the terminal via things like <a href="http://www.forchheimer.se/transset-df/">transset-df</a>. It is possible to use a compositor
+like picom and make the entire xterm window transparent, but that means the text will also be
+transparent. If you would like native background transparency but would
+still like a low resource usage terminal, check out URxvt.</p>
+<p>The colour support in xterm is also not as good as some other terminals,
+but I don&rsquo;t need to do fancy colour stuff (at least not with my terminal)
+and I find the xterm colours to be more than usable enough for text.</p>
+<p>Xterm also doesn&rsquo;t have tabs, which may be a deal breaker for some, but
+since I don&rsquo;t use tabs that much in a terminal emulator, and I use tmux,
+it wasn&rsquo;t a big downside for me. If you need tabs, again, you might want
+to check out URxvt.</p>
+<p>Xterm is widely touted to be mainly a fallback, emergency terminal, but I think it is still usable for daily use. A good alternative if you want more modern features like tabs, native transparency, and better color support would be URxvt, though you would sacrifice a couple milleseconds on top of the &lt;3ms typing latency Uxterm has.</p>
+<p>All in all, if you&rsquo;re like me and wanting a terminal with minimal typing
+latency, I recommend giving Uxterm a try. It may be old, but its still
+maintained and still (in my opinion), one of the best.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>On Speed Reading</title>
+            <link>https://rayes0.github.io/blog/speed-reading/</link>
+            <pubDate>Sun, 06 Sep 2020 14:59:20 -0600</pubDate>
+            
+            <guid>https://rayes0.github.io/blog/speed-reading/</guid>
+            <description>Speed reading is a very hotly debated topic nowadays. On one side, there are some courses which claim to be able to guarantee you a reading speed of over 2000 wpm (words per minute) in under 2 hours. On the other side, there are critics which refer to the entire speed reading topic as nothing more than a fluff, arguing that comprehension is drastically reduced to almost zero at higher speeds.</description>
+            <content type="html"><![CDATA[<p>Speed reading is a very hotly debated topic nowadays. On one side, there are some courses which claim to be able to guarantee you a reading speed of over 2000 wpm (words per minute) in under 2 hours. On the other side, there are critics which refer to the entire speed reading topic as nothing more than a fluff, arguing that comprehension is drastically reduced to almost zero at higher speeds.</p>
+<p>Based on my experience with speed reading, I will try and break down my personal opinion on this topic and also attempt to give some advice on steps which will help you to read faster.</p>
+<p>First off, you will have to trust that I know at least a little bit about what I am talking about. I read at around 800 words per minute. For reference, the average reading speed is around 200-250 wpm. I use 200 to calculate the estimated reading time for my posts you see at the top of the page here. The current Guinness World record holder for fastest reader reads at around 25000 to 30000 wpm (im not joking, look it up if you want).</p>
+<p>When I first got into speed reading, I thought, &ldquo;No way, its impossible to read that fast and still gain any sort of comprehension from the book&rdquo;. I was wrong. Although some of the advertisements online which try and guarantee you a absurdly high reading speed in such a short period of time is likely to be bogus, there is no denying the fact that you can have a pretty dramatic increase in reading speed with minimal loss in comprehension.</p>
+<p>So, how did I learn to speed read? Here&rsquo;s what I did:</p>
+<ol>
+<li>
+<p>First, I measured my baseline reading speed. There are many websites online which offer reading speed tests which can help you to get a sense of where you are at. It is best, however, to get a physical book. Get a text that is not too hard and that you can comfortably understand. Read normally and time yourself for one minute. Draw a line at the point at which you get to.</p>
+</li>
+<li>
+<p>Next, flip to a new section of the book you are on. This time, you are going to use your finger to pace yourself to read a little faster than you are used to. Don&rsquo;t aim for comprehension in this run. Your goal is to get used to seeing words faster. Do this for two sections of text, one minute per section.</p>
+</li>
+<li>
+<p>Now flip to another new section and draw two vertical lines about one and a half word lengths shorter than the printed margins of the book. Now start reading again, using your finger as a guide. The goal here is to make sure to keep your eyes and your finger within the lines. Use your peripheral vision to see the words outside of the line. Again, your goal right now is not comprehension. Instead, it is to just let your eyes get used to focusing on words faster. Do this again for two sections of text, one minute per section. On the second run, try to reduce the amount of words you say &ldquo;out loud&rdquo; in your head. This is called reducing subvocalization, which is considered disadvantageous for reading faster because it limits how fast you can read to how fast you can vocalize these words in your mind. The goal is to be able to still gain full comprehension while making sure that you are not subvocalizing too much. This is tough at first, but keep with it and you will see significant gains in reading speed.</p>
+</li>
+<li>
+<p>Now, go back to the original section of text which you marked in step 1. Time yourself again. You should now have gotten significantly further. Repeat these every day for two weeks or so, with the modification that the first time you do them for the day, focus on getting your eyes faster with focusing on words. The second time, aim for comprehension. Also, with the exercise in step 3, make the borders around 2-3 characters closer every time you do the exercise, eventually you will be able to read a whole line in just one or two glances through relying on peripheral vision.</p>
+</li>
+</ol>
+<p>So, that was how I nearly quadrupled my reading speed in only around two weeks. I hope this has helped you gain a new appreciation for how to read faster.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Introduction</title>
+            <link>https://rayes0.github.io/blog/introduction/</link>
+            <pubDate>Fri, 04 Sep 2020 10:33:44 -0600</pubDate>
+            
+            <guid>https://rayes0.github.io/blog/introduction/</guid>
+            <description>Since this is my first post on this blog, I decided to do a little introduction of myself. I go by the name &amp;lsquo;rayes&amp;rsquo; online. Of course, that isn&amp;rsquo;t my actual name, just a pseudonym. You can find some general stuff about me and this site on the About page. As that already exists and you can read it there, I will (try) and not repeat myself too much and will mostly be going into more detail about how exactly I got into privacy and linux.</description>
+            <content type="html"><![CDATA[<p>Since this is my first post on this blog, I decided to do a little introduction of myself. I go by the name &lsquo;rayes&rsquo; online. Of course, that isn&rsquo;t my actual name, just a pseudonym. You can find some general stuff about me and this site on the <a href="https://practicallyproductivity.com/about">About</a> page. As that already exists and you can read it there, I will (try) and not repeat myself too much and will mostly be going into more detail about how exactly I got into privacy and linux.</p>
+<p>During the school year, I didn&rsquo;t do what most other kids my age did. I wasn&rsquo;t on social media (not the popular ones anyway), I didn&rsquo;t &lsquo;hang out&rsquo; on evenings or try to be a &lsquo;cool kid&rsquo;. Looking back, I was probably looked down upon by many of the kids at school because of that. Instead of doing these things, I mostly stayed at home pursuing my interests, which I found to be more rewarding.</p>
+<p>As I said on the about page, I am super passionate about a lot of things. I love trying out new things and I can see myself doing basically anything for fun. This is probably what led to my curiosity about the human mind and learning. In my free time when I am not busy with school, I would browse endless articles on productivity, the human brain, and (what got me fascinated the most), memory.</p>
+<p>This is also what led to me discovering things like <a href="https://apps.ankiweb.net">anki</a>, a spaced repitition program I highly recommmend, and what led me to start bullet journaling.</p>
+<p>I discovered my interest in linux sometime along the way as well. I came to it originally for its customizability. I wanted a better looking and more efficient desktop, and after seeing some screenshots, I think the UNIX family was what I was looking for.</p>
+<p>Of course I was still a tech noob back then, having only used windows my whole life. I ran into a lot of problems which I didn&rsquo;t understand. However, I think I have some kind of OCD inside of me where I never give up on anything that I pursue out of curiousity, and so I didn&rsquo;t give up on linux. After dual booting with my windows installation for a couple months, I permanently switched to linux as a full time OS.</p>
+<p>Im glad I did and I am never going back.</p>
+<p>That was three years ago. Around that time, I also gained in interest into how my privacy was being invaded by closed source software, the NSA, and the so called, &lsquo;Big Five&rsquo;. However, I, like many others, thought that I had nothing to hide and that it would be all good.</p>
+<p>When I learned that this was not the case (because everyone has things that they are not comfortable with others looking at), I made the fateful decision to scrap all my previous online habits which I had kept for years, and start anew with only open source software and privacy respecting services. <a href="privacytools.io">privacytools.io</a> and the youtube channel &lsquo;The Hated One&rsquo; (don&rsquo;t worry, I watched it on Invidious) really helped me here.</p>
+<p>And thus, in the course of around three months, I went from linux and privacy noob to, well, not too much of a noob. I still had a long way though.</p>
+<p>Anyways, so that was a brief story of how I got into linux and open source. I would like to talk about my many other interests in the future. I don&rsquo;t know how many times throughout my process of writing this I thought, &ldquo;Hmm, I should do a post on that in the future.&rdquo; Its probably just the novelty of starting a new blog though.</p>
+<p>If you made it here, thank you. I currently use no analytics on my site, so I will probably never know (unless you tell me directly via the Fediverse or email), but I didn&rsquo;t create this site to get famous or anything, so I suppose I wouldn&rsquo;t care even if I knew. By that, I don&rsquo;t mean I don&rsquo;t care about you (of course I do), I just mean that I don&rsquo;t care whether or not this site becomes popular. Of course you are welcome to contact me and I will do my best to get back to you.</p>
+<p>This post was just intended as a story for how I got into linux and a general overview of me. Its more for me to just organize some of my thoughts for this blog. For those wondering if I will be following a schedule, I intend to write almost every day, at least 5 posts a week. It may be too optimistic, but whats the fun of life if you aren&rsquo;t given a challenge?</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

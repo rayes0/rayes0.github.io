@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Minimalisim on PracticallyProductivity</title>
+    <link>https://rayes0.github.io/tags/minimalisim/</link>
+    <description>Recent content in Minimalisim on PracticallyProductivity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 11 Sep 2020 17:10:13 -0600</lastBuildDate><atom:link href="https://rayes0.github.io/tags/minimalisim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Digital Minimalism - Less is more</title>
+      <link>https://rayes0.github.io/blog/digital-minimalism/</link>
+      <pubDate>Fri, 11 Sep 2020 17:10:13 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/blog/digital-minimalism/</guid>
+      <description>A couple months ago, I noticed that my computer was not performing as good as it used to. There were noticably longer boot times and it took longer to do certain tasks that used to be lightning fast. Nothing notable had changed with the way I used it. I didn&amp;rsquo;t install any CPU intensive programs and my workflow was the same as before. At first, I attributed it to the fact that the hardware was getting old.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software on PracticallyProductivity</title>
+    <link>https://rayes0.github.io/categories/software/</link>
+    <description>Recent content in Software on PracticallyProductivity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 05 Oct 2020 20:19:28 -0600</lastBuildDate><atom:link href="https://rayes0.github.io/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reasons to still use IRC in 2020</title>
+      <link>https://rayes0.github.io/blog/irc/</link>
+      <pubDate>Mon, 05 Oct 2020 20:19:28 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/blog/irc/</guid>
+      <description>IRC (Internet Relay Chat) is now considered a grandfather of instant messaging protocols. Having been around since 1988, it&amp;rsquo;s nearly as old as email. Back in the day, there was an IRC community for almost anything you could think of. However, the number of users of this protocol has been steadily declining since 2003. It&amp;rsquo;s lost about 60% of users since then.
+I think there are a couple reasons for this decline.</description>
+    </item>
+    
+    <item>
+      <title>My Experience With Vimwiki as a Personal Wiki</title>
+      <link>https://rayes0.github.io/blog/vimwiki/</link>
+      <pubDate>Sun, 13 Sep 2020 18:08:46 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/blog/vimwiki/</guid>
+      <description>For the past couple days, I&amp;rsquo;ve been wanting to set up a personal wiki. From my understanding, personal wikis were a big fad in the earlier 2000&amp;rsquo;s, and have now died out. Perhaps the reason for this could have been the emergence of more popular note taking formats rather than wiki syntax, or because the rise of large-scale information databases like Wikipedia left users thinking that wikis are not suitable for personal use.</description>
+    </item>
+    
+    <item>
+      <title>Digital Minimalism - Less is more</title>
+      <link>https://rayes0.github.io/blog/digital-minimalism/</link>
+      <pubDate>Fri, 11 Sep 2020 17:10:13 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/blog/digital-minimalism/</guid>
+      <description>A couple months ago, I noticed that my computer was not performing as good as it used to. There were noticably longer boot times and it took longer to do certain tasks that used to be lightning fast. Nothing notable had changed with the way I used it. I didn&amp;rsquo;t install any CPU intensive programs and my workflow was the same as before. At first, I attributed it to the fact that the hardware was getting old.</description>
+    </item>
+    
+    <item>
+      <title>Terminal Emulators</title>
+      <link>https://rayes0.github.io/blog/terminal-emulator/</link>
+      <pubDate>Mon, 07 Sep 2020 19:12:10 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/blog/terminal-emulator/</guid>
+      <description>Arguably one of the most important aspects of Linux is the terminal emulator. Especially on a minimal system, the terminal emulator is going to easily be one of your most used pieces of software.
+Over the course of my computing life with linux, I have used many different terminal emulators. I started off with gnome terminal, the default terminal in my installation. When I started using a standalone window manager instead of a full fledged desktop environment, I moved to alacritty due to the fact that it was GPU accelerated, meaning it would be faster.</description>
+    </item>
+    
+  </channel>
+</rss>

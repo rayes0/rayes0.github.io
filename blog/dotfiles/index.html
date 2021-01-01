@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="rayes ">
+<meta name="description" content="I recently created a public dotfiles repository on my Github (which you can find here). Previously, I used a private git repo to back up my files, but I wanted to share some of my configurations so I decided to make it public.
+Backing up your dotfiles using git has many advantages. For example, it will enable you to have version control, and be able to easily rollback to previous versions if your config breaks." />
+<meta name="keywords" content=", Dotfiles, Linux, Customization" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://rayes0.github.io/blog/dotfiles/" />
+
+
+    <title>
+        
+            Managing Dotfiles with Bare Git — PracticallyProductivity 
+        
+    </title>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://rayes0.github.io/main.9ef9d93ab2c6ba33af3a8a81918eb59d83aada41357a27f112c289aeb40d6e16.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://rayes0.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://rayes0.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://rayes0.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://rayes0.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://rayes0.github.io/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://rayes0.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Managing Dotfiles with Bare Git">
+<meta itemprop="description" content="I recently created a public dotfiles repository on my Github (which you can find here). Previously, I used a private git repo to back up my files, but I wanted to share some of my configurations so I decided to make it public.
+Backing up your dotfiles using git has many advantages. For example, it will enable you to have version control, and be able to easily rollback to previous versions if your config breaks.">
+<meta itemprop="datePublished" content="2020-12-10T10:36:54-07:00" />
+<meta itemprop="dateModified" content="2020-12-10T10:36:54-07:00" />
+<meta itemprop="wordCount" content="474">
+<meta itemprop="image" content="https://rayes0.github.io"/>
+
+
+
+<meta itemprop="keywords" content="Dotfiles,Linux,Customization," />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://rayes0.github.io"/>
+
+<meta name="twitter:title" content="Managing Dotfiles with Bare Git"/>
+<meta name="twitter:description" content="I recently created a public dotfiles repository on my Github (which you can find here). Previously, I used a private git repo to back up my files, but I wanted to share some of my configurations so I decided to make it public.
+Backing up your dotfiles using git has many advantages. For example, it will enable you to have version control, and be able to easily rollback to previous versions if your config breaks."/>
+
+
+
+    <meta property="og:title" content="Managing Dotfiles with Bare Git" />
+<meta property="og:description" content="I recently created a public dotfiles repository on my Github (which you can find here). Previously, I used a private git repo to back up my files, but I wanted to share some of my configurations so I decided to make it public.
+Backing up your dotfiles using git has many advantages. For example, it will enable you to have version control, and be able to easily rollback to previous versions if your config breaks." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rayes0.github.io/blog/dotfiles/" />
+<meta property="og:image" content="https://rayes0.github.io"/>
+<meta property="article:published_time" content="2020-12-10T10:36:54-07:00" />
+<meta property="article:modified_time" content="2020-12-10T10:36:54-07:00" />
+
+
+
+
+    <meta property="article:section" content="Linux" />
+
+
+
+    <meta property="article:published_time" content="2020-12-10 10:36:54 -0700 MST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+		
+            <div class="content">
+                
+  <main class="post">
+    <div class="post-info">
+	  <a href="https://rayes0.github.io">&lt; Home</a><br> 
+	  <a href="https://rayes0.github.io/blog">&lt; All Posts</a><br>
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        3 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://rayes0.github.io/blog/dotfiles/">Managing Dotfiles with Bare Git</a>
+      </h1>
+
+      
+
+      <div class="post-content">
+        <p>I recently created a public dotfiles repository on my Github (which you can find <a href="https://github.com/rayes0/dotfiles">here</a>). Previously, I used a private git repo to back up my files, but I wanted to share some of my configurations so I decided to make it public.</p>
+<p>Backing up your dotfiles using git has many advantages. For example, it will enable you to have version control, and be able to easily rollback to previous versions if your config breaks. It will also enable the ability to quickly pull the files onto any system. Alternatives such as a special dotfiles manager also typically requires the installation of another piece of software, which is not always desirable.</p>
+<p>In this article, I will show you how I back up and store my dotfiles. I will assume that you have a basic understanding of how git works, and that you also know a couple basic commands.</p>
+<h2 id="creating-the-repo">Creating the Repo</h2>
+<p>The following will create a bare git repository in the directory <code>$HOME/repos/dotfiles</code>. You can change this to whatever directory you like, just make sure the directory exists before you initialize the repo.</p>
+<pre><code>git init --bare $HOME/repos/dotfiles
+alias dots='/usr/bin/git --git-dir=$HOME/repos/dotfiles --work-tree=$HOME
+dots config --local status.showUntrackedFiles no
+</code></pre><p>I suggest you put the alias in a file run by your shell on startup (eg: ~/.bashrc, ~/.zshrc, etc.). That way, you won&rsquo;t have to manually create the alias every time you need to update the repository.</p>
+<p>Okay, now that our repo is set up, add a remote origin with the following command, replacing the url with your own remote git repository.</p>
+<pre><code>dots remote add origin you@yourgit.com/dotfiles.git
+</code></pre><p>Now our repository is ready, and we can add some files to track. For example:</p>
+<pre><code>dots add .Xresources .bashrc
+</code></pre><p>You can now add any files you want to track, as long as it is in your <code>$HOME</code> directory. Once you&rsquo;ve got some files, you can commit and push your changes.</p>
+<pre><code>dots commit -m &quot;Some cool name&quot;
+dots push
+</code></pre><h2 id="pulling-to-another-system">Pulling To Another System</h2>
+<p>Here&rsquo;s how to pull the dotfiles onto another system.</p>
+<p>First, clone the bare repo to the <em><strong>same location</strong></em> as the repo on the original system. You must clone to the same location because git will track the filepaths relative to the path in which you first initialized the repo. Eg: If you initialized the repo in <code>$HOME/repos/dotfiles</code>, and you add a file named <code>$HOME/.Xresources</code>, git will see the location of that file as <code>../../.Xresources</code>.</p>
+<pre><code>git clone --bare https://yourgit.com/reponame.git $HOME/repos/dotfiles
+</code></pre><p>After cloning, define the same alias as before, and also add it to a file loaded by your shell.</p>
+<pre><code>alias dots='/usr/bin/git --git-dir=$HOME/repos/dotfiles --work-tree=$HOME
+</code></pre><p>Now to apply the changes from the remote repo to our system, run the following command. If you already have files with the same paths as the ones on your remote repo, the command will error out. To fix this, just remove/rename those files.</p>
+<pre><code>dots checkout -f
+</code></pre>
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
+		<ellipse cx="12" cy="12" rx="10" ry="10"/>
+        </svg><span style="margin-right: 0.5em;"><a href="https://rayes0.github.io/categories/linux/">Linux</a></span>
+	  <a href="https://rayes0.github.io/categories/">All Categories -></a>
+      </p>
+      
+      <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+            <line x1="7" y1="7" x2="7" y2="7"></line>
+	  </svg><span class="tag"><a href="https://rayes0.github.io/tags/dotfiles/">Dotfiles</a></span><span class="tag"><a href="https://rayes0.github.io/tags/linux/">Linux</a></span><span class="tag"><a href="https://rayes0.github.io/tags/customization/">Customization</a></span>
+	  <a href="https://rayes0.github.io/tags/">All Tags -></a>
+        </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        474 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        2020-12-10 10:36 -0700
+      </p>
+    </div>
+
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h"></span>
+          <hr />
+        </div>
+
+        <div class="pagination__buttons">
+          
+
+          
+            <span class="button next">
+              <a href="https://rayes0.github.io/blog/time-management-linux/">
+                <span class="button__text">Time Management on Linux</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+    
+    
+
+  </main>
+
+                
+                    <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+	    
+	    
+                <span>Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by rayes</span>
+        </div>
+    </div>
+</footer>
+
+                
+
+            </div>
+	    <header class="header sticky">
+    <span class="header__inner">
+        <a href="https://rayes0.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+	<span class="logo__text" id="desktop-only">Managing-Dotfiles-Wi …@Blog</span>
+        <span class="logo__text" id="mobile-only">Managing-D …@Blog</span>
+            <span class="logo__cursor" style=
+                  "background-color:#b7683a;
+		   
+                   background-color:#b7683a;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <div class="menu dropup">
+    <div class="menu__inner"><li><a href="https://rayes0.github.io/blog/">Blog</a></li><li><a href="https://rayes0.github.io/webnovels/anemoia/">Anemoia (Novel)</a></li><li><a href="https://rayes0.github.io/about/">About</a></li>
+    </div>
+</div>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+        </div>
+
+	
+        
+
+
+
+
+<script type="text/javascript" src="https://rayes0.github.io/bundle.min.02dad467641013564897960b5c44a2d88ccef852e19497ed12afddd06c21f2cbffeb117b2601b1a69ea909b2258d924f5408cbbe69bd09829d7d3d251aebcff2.js" integrity="sha512-AtrUZ2QQE1ZIl5YLXESi2IzO&#43;FLhlJftEq/d0Gwh8sv/6xF7JgGxpp6pCbIljZJPVAjLvmm9CYKdfT0lGuvP8g=="></script>
+
+
+
+    </body>
+</html>

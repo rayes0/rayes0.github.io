@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SRS on PracticallyProductivity</title>
+    <link>https://rayes0.github.io/tags/srs/</link>
+    <description>Recent content in SRS on PracticallyProductivity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 08 Sep 2020 19:50:53 -0600</lastBuildDate><atom:link href="https://rayes0.github.io/tags/srs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spaced Repetition</title>
+      <link>https://rayes0.github.io/blog/spaced-repetition/</link>
+      <pubDate>Tue, 08 Sep 2020 19:50:53 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/blog/spaced-repetition/</guid>
+      <description>If your a student, you may have heard of a piece of software called Anki. Anki is one of the two big SRS programs out there right now.
+In this post, I will try explain what SRS is to those unfamiliar with it and why it can be a really powerful tool for learning pretty much anything.
+SRS stands for spaced repetition software. Spaced repetition is a study technique where you &amp;ldquo;space out&amp;rdquo; your repetition of the material over time, with the intervals getting larger with every repetition.</description>
+    </item>
+    
+  </channel>
+</rss>

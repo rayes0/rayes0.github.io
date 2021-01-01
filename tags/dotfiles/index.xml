@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dotfiles on PracticallyProductivity</title>
+    <link>https://rayes0.github.io/tags/dotfiles/</link>
+    <description>Recent content in Dotfiles on PracticallyProductivity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 10 Dec 2020 10:36:54 -0700</lastBuildDate><atom:link href="https://rayes0.github.io/tags/dotfiles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Managing Dotfiles with Bare Git</title>
+      <link>https://rayes0.github.io/blog/dotfiles/</link>
+      <pubDate>Thu, 10 Dec 2020 10:36:54 -0700</pubDate>
+      
+      <guid>https://rayes0.github.io/blog/dotfiles/</guid>
+      <description>I recently created a public dotfiles repository on my Github (which you can find here). Previously, I used a private git repo to back up my files, but I wanted to share some of my configurations so I decided to make it public.
+Backing up your dotfiles using git has many advantages. For example, it will enable you to have version control, and be able to easily rollback to previous versions if your config breaks.</description>
+    </item>
+    
+  </channel>
+</rss>

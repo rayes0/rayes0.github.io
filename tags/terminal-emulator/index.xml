@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terminal-Emulator on PracticallyProductivity</title>
+    <link>https://rayes0.github.io/tags/terminal-emulator/</link>
+    <description>Recent content in Terminal-Emulator on PracticallyProductivity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 07 Sep 2020 19:12:10 -0600</lastBuildDate><atom:link href="https://rayes0.github.io/tags/terminal-emulator/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terminal Emulators</title>
+      <link>https://rayes0.github.io/blog/terminal-emulator/</link>
+      <pubDate>Mon, 07 Sep 2020 19:12:10 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/blog/terminal-emulator/</guid>
+      <description>Arguably one of the most important aspects of Linux is the terminal emulator. Especially on a minimal system, the terminal emulator is going to easily be one of your most used pieces of software.
+Over the course of my computing life with linux, I have used many different terminal emulators. I started off with gnome terminal, the default terminal in my installation. When I started using a standalone window manager instead of a full fledged desktop environment, I moved to alacritty due to the fact that it was GPU accelerated, meaning it would be faster.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PracticallyProductivity</title>
+    <link>https://rayes0.github.io/</link>
+    <description>Recent content on PracticallyProductivity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 10 Dec 2020 10:36:54 -0700</lastBuildDate><atom:link href="https://rayes0.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Managing Dotfiles with Bare Git</title>
+      <link>https://rayes0.github.io/blog/dotfiles/</link>
+      <pubDate>Thu, 10 Dec 2020 10:36:54 -0700</pubDate>
+      
+      <guid>https://rayes0.github.io/blog/dotfiles/</guid>
+      <description>I recently created a public dotfiles repository on my Github (which you can find here). Previously, I used a private git repo to back up my files, but I wanted to share some of my configurations so I decided to make it public.
+Backing up your dotfiles using git has many advantages. For example, it will enable you to have version control, and be able to easily rollback to previous versions if your config breaks.</description>
+    </item>
+    
+    <item>
+      <title>Time Management on Linux</title>
+      <link>https://rayes0.github.io/blog/time-management-linux/</link>
+      <pubDate>Mon, 16 Nov 2020 16:09:52 -0700</pubDate>
+      
+      <guid>https://rayes0.github.io/blog/time-management-linux/</guid>
+      <description>As a student, I need to keep up with a constant influx of assignments and tests. I also need to manage my personal life outside of school, and make time for hobbies which I enjoy. Sometimes, keeping up with everything gets hard. These past couple months have really tested my time management skills, due to the extra COVID restrictions meaning that I had to take online classes. This gave me more freedom of when to complete my work, but also numerous more distractions.</description>
+    </item>
+    
+    <item>
+      <title>Update From the Author</title>
+      <link>https://rayes0.github.io/webnovels/anemoia/update-from-me/</link>
+      <pubDate>Wed, 14 Oct 2020 13:02:30 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/webnovels/anemoia/update-from-me/</guid>
+      <description>Dear readers,
+It&amp;rsquo;s rayes here! First of all, I want to thank all of you, my readers, both of this particular webnovel, and the blog in general. Thank you to all who have sent me feedback and fanmail. And those who pointed out some mistakes in my writing. It truly means a lot to me and I can&amp;rsquo;t thank you all enough.
+Let&amp;rsquo;s get straight to the point.
+As of right now, I am too busy to update this novel according to the original schedule (2 times a week).</description>
+    </item>
+    
+    <item>
+      <title>Reasons to still use IRC in 2020</title>
+      <link>https://rayes0.github.io/blog/irc/</link>
+      <pubDate>Mon, 05 Oct 2020 20:19:28 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/blog/irc/</guid>
+      <description>IRC (Internet Relay Chat) is now considered a grandfather of instant messaging protocols. Having been around since 1988, it&amp;rsquo;s nearly as old as email. Back in the day, there was an IRC community for almost anything you could think of. However, the number of users of this protocol has been steadily declining since 2003. It&amp;rsquo;s lost about 60% of users since then.
+I think there are a couple reasons for this decline.</description>
+    </item>
+    
+    <item>
+      <title>Chapter 3</title>
+      <link>https://rayes0.github.io/webnovels/anemoia/chapter3/</link>
+      <pubDate>Tue, 29 Sep 2020 21:49:34 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/webnovels/anemoia/chapter3/</guid>
+      <description>Evan rubbed his eyes. He was feeling slightly sleepy. It would probably be best to take a caffeine pill before he started his mission. Right now, Evan was in his dorm room. His roommate Philip seemed to have other things to do today. Maybe also an urgent mission? Evan didn&amp;rsquo;t know.
+A few papers were propped up against his pillow. Next to them was a black file with the words &amp;lsquo;Grade A&amp;rsquo; written on the label.</description>
+    </item>
+    
+    <item>
+      <title>Chapter 2</title>
+      <link>https://rayes0.github.io/webnovels/anemoia/chapter2/</link>
+      <pubDate>Sat, 26 Sep 2020 21:33:06 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/webnovels/anemoia/chapter2/</guid>
+      <description>There in the corner, encircled by shadows, was Headmaster Jules. He was a controlled man, who gave you the feeling that he was imperturbable. A former student at the school who, back in his day, was widely touted as the ideal version of a soldier. He was also rumoured to have been Nick&amp;rsquo;s teacher in his black suit days, and considered to have mastered the field of inferno magic. In other words, he was the best of the best.</description>
+    </item>
+    
+    <item>
+      <title>Chapter 1</title>
+      <link>https://rayes0.github.io/webnovels/anemoia/chapter1/</link>
+      <pubDate>Tue, 22 Sep 2020 15:03:40 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/webnovels/anemoia/chapter1/</guid>
+      <description>Twelve years after Prologue
+Evan awoke in his dorm room. He tried to open his eyes, but the morning sun filtering through the window was too much for him right now. Half squinting, he hauled himself out of the bed and proceeded to change into his blue suit. The dorms were nice and quiet at this time. Evan peered at another bed beside his, where his roommate Philip still lay sound asleep.</description>
+    </item>
+    
+    <item>
+      <title>Prologue</title>
+      <link>https://rayes0.github.io/webnovels/anemoia/prologue/</link>
+      <pubDate>Sat, 19 Sep 2020 21:42:35 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/webnovels/anemoia/prologue/</guid>
+      <description>It was a calm October day. The leaves were beginning to yellow. The air was damp but still clear, with a slight scent of morning dew still lingering. An open window let a constant, gentle breeze into the room, almost begging one to sit and daydream the day away. Time seemed to move in slow motion, like the lingering second before the last note of a beautiful piece of music.</description>
+    </item>
+    
+    <item>
+      <title>My Experience With Vimwiki as a Personal Wiki</title>
+      <link>https://rayes0.github.io/blog/vimwiki/</link>
+      <pubDate>Sun, 13 Sep 2020 18:08:46 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/blog/vimwiki/</guid>
+      <description>For the past couple days, I&amp;rsquo;ve been wanting to set up a personal wiki. From my understanding, personal wikis were a big fad in the earlier 2000&amp;rsquo;s, and have now died out. Perhaps the reason for this could have been the emergence of more popular note taking formats rather than wiki syntax, or because the rise of large-scale information databases like Wikipedia left users thinking that wikis are not suitable for personal use.</description>
+    </item>
+    
+    <item>
+      <title>Digital Minimalism - Less is more</title>
+      <link>https://rayes0.github.io/blog/digital-minimalism/</link>
+      <pubDate>Fri, 11 Sep 2020 17:10:13 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/blog/digital-minimalism/</guid>
+      <description>A couple months ago, I noticed that my computer was not performing as good as it used to. There were noticably longer boot times and it took longer to do certain tasks that used to be lightning fast. Nothing notable had changed with the way I used it. I didn&amp;rsquo;t install any CPU intensive programs and my workflow was the same as before. At first, I attributed it to the fact that the hardware was getting old.</description>
+    </item>
+    
+  </channel>
+</rss>

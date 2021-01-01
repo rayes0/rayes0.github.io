@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim-Plugins on PracticallyProductivity</title>
+    <link>https://rayes0.github.io/tags/vim-plugins/</link>
+    <description>Recent content in Vim-Plugins on PracticallyProductivity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sun, 13 Sep 2020 18:08:46 -0600</lastBuildDate><atom:link href="https://rayes0.github.io/tags/vim-plugins/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Experience With Vimwiki as a Personal Wiki</title>
+      <link>https://rayes0.github.io/blog/vimwiki/</link>
+      <pubDate>Sun, 13 Sep 2020 18:08:46 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/blog/vimwiki/</guid>
+      <description>For the past couple days, I&amp;rsquo;ve been wanting to set up a personal wiki. From my understanding, personal wikis were a big fad in the earlier 2000&amp;rsquo;s, and have now died out. Perhaps the reason for this could have been the emergence of more popular note taking formats rather than wiki syntax, or because the rise of large-scale information databases like Wikipedia left users thinking that wikis are not suitable for personal use.</description>
+    </item>
+    
+  </channel>
+</rss>
