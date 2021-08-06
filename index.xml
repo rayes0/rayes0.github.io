@@ -6,41 +6,26 @@
     <description>Recent content on rayes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-ca</language>
-    <lastBuildDate>Fri, 30 Jul 2021 12:15:00 -0600</lastBuildDate><atom:link href="https://rayes0.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rayes0.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Anime</title>
-      <link>https://rayes0.github.io/media/anime/</link>
-      <pubDate>Fri, 30 Jul 2021 12:15:00 -0600</pubDate>
+      <title>Finished</title>
+      <link>https://rayes0.github.io/media/finished/</link>
+      <pubDate>Fri, 30 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rayes0.github.io/media/anime/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Books</title>
-      <link>https://rayes0.github.io/media/books/</link>
-      <pubDate>Fri, 30 Jul 2021 12:15:00 -0600</pubDate>
-      
-      <guid>https://rayes0.github.io/media/books/</guid>
-      <description></description>
+      <guid>https://rayes0.github.io/media/finished/</guid>
+      <description>Thoughts, reviews, and summaries on things I&#39;ve finished since August 2021. Books Fiction The Handmaid&amp;rsquo;s Tale 08/04/21
+A fairly multifaceted novel full of symbolism and allusions that managed to somehow confuse, entertain, amaze me all at the same time. Though I had previously heard of Margaret Atwood, it was my first time reading her writing. In this novel in particular, witty wording, puns, symbolism, most dialogue not being surrounded by quotation marks, and Offred&amp;rsquo;s repeated references to the future readers of the story makes it feel almost like metafictional poetry.</description>
     </item>
     
     <item>
       <title>In Progress</title>
       <link>https://rayes0.github.io/media/in-progress/</link>
-      <pubDate>Fri, 30 Jul 2021 12:15:00 -0600</pubDate>
+      <pubDate>Fri, 30 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rayes0.github.io/media/in-progress/</guid>
-      <description>List of what I&#39;m currently reading/watching. Books  The Handmaid&amp;rsquo;s Tale  Light Novels  Toradora  Vol 1 Vol 2 Vol 3 Vol 4 Vol 5 Vol 6 Vol 7 Vol 8 Vol 9   Manga  Horimiya (reread)  Vol 1 Vol 2 Vol 3 Vol 4 Vol 5 Vol 6 Vol 7 Vol 8 Vol 9 Vol 10 Vol 11 Vol 12 Vol 13 Vol 14 Vol 15 Vol 16    Shingeki no Kyojin  Vol.</description>
-    </item>
-    
-    <item>
-      <title>Manga</title>
-      <link>https://rayes0.github.io/media/manga/</link>
-      <pubDate>Fri, 30 Jul 2021 12:15:00 -0600</pubDate>
-      
-      <guid>https://rayes0.github.io/media/manga/</guid>
-      <description></description>
+      <description>Tracker for what I&#39;m currently reading/watching. Books   The Testaments, Margaret Atwood  Light Novels    Toradora
+  Progress   Vol 1 Vol 2 Vol 3 Vol 4 Vol 5 Vol 6 Vol 7 Vol 8 Vol 9     Manga    Shingeki no Kyojin
+  Progress   Vol. 1 Vol. 2 Vol. 3 Vol. 4 Vol. 5 Vol.</description>
     </item>
     
     <item>
@@ -49,12 +34,10 @@
       <pubDate>Thu, 29 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rayes0.github.io/meta/</guid>
-      <description>Meta page of various links to other content on this site. Media A collection of constantly updated lists for various forms of media that I have finished since August 2021.
-In progress
-Books
-Manga
-Anime
-Other anemoia webnovel (not currently updating, see here)</description>
+      <description>Meta page of various links to other content on this site. Media A collection of various forms of media that I have finished since August 2021.
+  In progress
+  Finished
+ Books Manga Anime    Other anemoia webnovel (not currently updating, see here)</description>
     </item>
     
     <item>
@@ -63,7 +46,7 @@ Other anemoia webnovel (not currently updating, see here)</description>
       <pubDate>Wed, 14 Jul 2021 12:08:23 -0600</pubDate>
       
       <guid>https://rayes0.github.io/blog/consiousness/</guid>
-      <description>It is commonly accepted that machines are not and cannot be conscious, and that any perceived consciousness is merely an imitation of organic consciousness. While I don&amp;rsquo;t disagree with these claims, there is not much solid proof for them, though of course, the same is true for the converse. It is still worth considering both sides of the problem. Therefore, for arguments sake, this article will lay out a series of examples and thought experiments potentially proving that artificial conscious could be possible.</description>
+      <description>It is commonly accepted that machines are not and cannot be conscious, and that any perceived consciousness is merely an imitation of organic consciousness. While I don&amp;rsquo;t disagree with these claims, there is not much solid proof for them, though of course, the same is true for the converse. However, it is still worth considering both sides of the problem. Therefore, for arguments sake, this article will lay out a series of examples and thought experiments potentially proving that artificial conscious could be possible.</description>
     </item>
     
     <item>
@@ -130,6 +113,17 @@ Evan awoke in his dorm room. He tried to open his eyes, but the morning sun filt
       
       <guid>https://rayes0.github.io/anemoia/prologue/</guid>
       <description>It was a calm October day. The leaves were beginning to yellow. The air was damp but still clear, with a slight scent of morning dew still lingering. An open window let a constant, gentle breeze into the room, almost begging one to sit and daydream the day away. Time seemed to move in slow motion, like the lingering second before the last note of a beautiful piece of music.</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>https://rayes0.github.io/notes/machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayes0.github.io/notes/machine-learning/</guid>
+      <description>Some mathematical concepts and derivations that form the basis behind some simple machine learning algorithms. It can be viewed as a high level summary of Andrew Ng&amp;rsquo;s famous Coursera course, or any introductory machine learning textbook.
+Helpful Prior Knowledge
+ Basic linear algebra, fundamental operations (\(&amp;#43;, -, \times, /\)   ) with vectors and matrices, transpose and inverse Basic conceptual calculus, taking derivatives  Notation Common idiomatic notation used in machine learning and linear algebra, used throughout these notes.</description>
     </item>
     
   </channel>
