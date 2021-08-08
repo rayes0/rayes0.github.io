@@ -6,7 +6,18 @@
     <description>Recent content on rayes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-ca</language>
-    <lastBuildDate>Fri, 30 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rayes0.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Aug 2021 12:03:00 -0600</lastBuildDate><atom:link href="https://rayes0.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Learning (unfinished)</title>
+      <link>https://rayes0.github.io/notes/machine-learning/</link>
+      <pubDate>Sun, 08 Aug 2021 12:03:00 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/notes/machine-learning/</guid>
+      <description>Some mathematical concepts and derivations that form the basis behind some simple machine learning algorithms. It can be viewed as a high level summary of Andrew Ng&amp;rsquo;s famous Coursera course, or any introductory machine learning textbook.
+Helpful Prior Knowledge
+ Basic linear algebra, fundamental operations (\(&amp;#43;, -, \times, /\)   ) with vectors and matrices, transpose and inverse Basic conceptual calculus, taking derivatives  Basic Concepts  Features: The numerical inputs for the algorithm from which it makes predictions.</description>
+    </item>
+    
     <item>
       <title>Finished</title>
       <link>https://rayes0.github.io/media/finished/</link>
@@ -36,10 +47,12 @@ The Handmaid&amp;rsquo;s Tale (Margaret Atwood)
       <pubDate>Thu, 29 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rayes0.github.io/meta/</guid>
-      <description>Meta page of various links to other content on this site. Media A collection of thins I have read/watched since August 2021. They are generated from my personal media org file with ox-hugo.
+      <description>
+Meta page of various links to other content on this site. Media A collection of things I have read/watched since August 2021. They are generated from my personal media org file with ox-hugo.
   In progress
   Finished
- Books Manga Anime    Other anemoia webnovel (not currently updating, see here)</description>
+ Books Manga Anime    Other anemoia webnovel (not currently updating, see here)
+Notes  Basics of Machine Learning (unfinished)  </description>
     </item>
     
     <item>
@@ -115,17 +128,6 @@ Evan awoke in his dorm room. He tried to open his eyes, but the morning sun filt
       
       <guid>https://rayes0.github.io/anemoia/prologue/</guid>
       <description>It was a calm October day. The leaves were beginning to yellow. The air was damp but still clear, with a slight scent of morning dew still lingering. An open window let a constant, gentle breeze into the room, almost begging one to sit and daydream the day away. Time seemed to move in slow motion, like the lingering second before the last note of a beautiful piece of music.</description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
-      <link>https://rayes0.github.io/notes/machine-learning/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rayes0.github.io/notes/machine-learning/</guid>
-      <description>Some mathematical concepts and derivations that form the basis behind some simple machine learning algorithms. It can be viewed as a high level summary of Andrew Ng&amp;rsquo;s famous Coursera course, or any introductory machine learning textbook.
-Helpful Prior Knowledge
- Basic linear algebra, fundamental operations (\(&amp;#43;, -, \times, /\)   ) with vectors and matrices, transpose and inverse Basic conceptual calculus, taking derivatives  Notation Common idiomatic notation used in machine learning and linear algebra, used throughout these notes.</description>
     </item>
     
   </channel>
