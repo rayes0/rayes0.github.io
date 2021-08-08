@@ -71,7 +71,7 @@
     
     <label>Created: </label><label><label class="slant">Jun 12, 2021</label>
     <label class="meta-sep">•</label>
-    <label>Modified: </label><label class="slant">Aug 6, 2021</label>
+    <label>Modified: </label><label class="slant">Aug 7, 2021</label>
     
     
   </span>
@@ -193,12 +193,11 @@ mailj2[at]protonmail[dot]com</p>
                 
     <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;KaTeX" title="KaTeX" />
   
-</noscript>, otherwise it will fall back to static images from <a href="https://latex.codecogs.com/eqneditor/editor.php">CodeCogs</a>, which isn&rsquo;t ideal because it creates extra external requests, and we lose size responsiveness, but it&rsquo;s better than not rendering anything at all.</p>
+</noscript>, otherwise it will fall back to static images from <a href="https://latex.codecogs.com/eqneditor/editor.php">CodeCogs</a>, which isn&rsquo;t ideal because it creates extra external requests, is slower, and we lose responsiveness and the like, but it&rsquo;s better than just rendering the raw latex.</p>
 <p>Some possible features I would like to implement in the future, while still being usable without JS:</p>
 <ul>
 <li>Sidenotes instead of footnotes would make references and extra content easy to view. Maybe something like <a href="https://danilafe.com/blog/sidenotes/">this</a>.</li>
 <li>Extended rendering capabilities, optionally with JS. Eg: music notation, graphs, etc. This will be determined largely by what I feel like writing in the future</li>
-<li>An RSS feed. Hugo has the ability to generate one automatically so this should be easy</li>
 </ul>
 <h2 id="post-metadata">Post Metadata</h2>
 <p>An explanation of the metadata at the top of each post:</p>
@@ -224,14 +223,21 @@ mailj2[at]protonmail[dot]com</p>
 
     </div><footer>
   <div class="container">
-      <p class="credits powered-by">
-        Powered by <a href="https://gohugo.io">Hugo</a>
-      </p>
-			<p class="credits copyright">
-        <a href="https://rayes0.github.ioabout">rayes</a>
-        &copy;
-        2021
-			</p>
+    <p class="credits">
+      <a href="https://rayes0.github.ioblog/index.xml">rss</a>
+      
+      •
+      <a href="https://github.com/rayes0/blog">source</a>
+      
+    </p>
+    <p class="credits powered-by">
+      powered by: <a href="https://gohugo.io/">Hugo</a>, <a href="https://katex.org/">KaTeX</a>
+    </p>
+    <p class="credits copyright">
+      <a href="https://rayes0.github.ioabout">rayes</a>
+      &copy;
+      2021
+    </p>
   </div>
 </footer></body>
 </html>
