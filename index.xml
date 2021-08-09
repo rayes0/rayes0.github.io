@@ -15,7 +15,7 @@
       <guid>https://rayes0.github.io/notes/machine-learning/</guid>
       <description>Some mathematical concepts and derivations that form the basis behind some simple machine learning algorithms. It can be viewed as a high level summary of Andrew Ng&amp;rsquo;s famous Coursera course, or any introductory machine learning textbook.
 Helpful Prior Knowledge
- Basic linear algebra, fundamental operations (\(&amp;#43;, -, \times, /\)   ) with vectors and matrices, transpose and inverse Basic conceptual calculus, taking derivatives  Basic Concepts  Features: The numerical inputs for the algorithm from which it makes predictions.</description>
+ Basic linear algebra, fundamental operations ( \(&amp;#43;, -, \times, /\)    ) with vectors and matrices, transpose and inverse Basic conceptual calculus, taking derivatives  Basic Concepts  Features: The numerical inputs for the algorithm from which it makes predictions.</description>
     </item>
     
     <item>

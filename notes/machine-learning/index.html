@@ -94,83 +94,97 @@
 	<p>Some mathematical concepts and derivations that form the basis behind some simple machine learning algorithms. It can be viewed as a high level summary of Andrew Ng&rsquo;s famous <a href="https://www.coursera.org/learn/machine-learning">Coursera course</a>, or any introductory machine learning textbook.</p>
 <p><strong>Helpful Prior Knowledge</strong></p>
 <ul>
-<li>Basic linear algebra, fundamental operations (<span class="jsonly">
+<li>Basic linear algebra, fundamental operations (
+<span class="jsonly">
                 
     \(&#43;, -, \times, /\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%2b%2c%20-%2c%20%5ctimes%2c%20%2f" title="&#43;, -, \times, /" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%2b%2c%20-%2c%20%5ctimes%2c%20%2f" title="&#43;, -, \times, /" />
   
-</noscript>) with vectors and matrices, transpose and inverse</li>
+</noscript>
+) with vectors and matrices, transpose and inverse</li>
 <li>Basic conceptual calculus, taking derivatives</li>
 </ul>
 <h1 id="basic-concepts">Basic Concepts</h1>
 <ul>
 <li>Features: The numerical inputs for the algorithm from which it makes predictions.</li>
 <li>Parameters: The weights which we multiply to the features to produce the final output (corresponds to the prediction we make). These are the values we are trying to learn.</li>
-<li>Hypothesis function: Function which uses the parameters to map the input features to the final prediction. It is represented as <span class="jsonly">
+<li>Hypothesis function: Function which uses the parameters to map the input features to the final prediction. It is represented as 
+<span class="jsonly">
                 
     \(h_{\theta}(x)\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;h_%7b%5ctheta%7d%28x%29" title="h_{\theta}(x)" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;h_%7b%5ctheta%7d%28x%29" title="h_{\theta}(x)" />
   
-</noscript>, taking the features <span class="jsonly">
+</noscript>
+, taking the features 
+<span class="jsonly">
                 
     \(x\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x" title="x" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x" title="x" />
   
-</noscript> (could be a single value or a vector) as input.</li>
-<li>Some ways to learn <span class="jsonly">
+</noscript>
+ (could be a single value or a vector) as input.</li>
+<li>Some ways to learn 
+<span class="jsonly">
                 
     \(\theta\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta" title="\theta" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta" title="\theta" />
   
-</noscript> values:
+</noscript>
+ values:
 <ul>
 <li>Gradient Descent:
 <ul>
-<li>Cost function: Function that returns the error of the hypothesis function and the actual correct values in the training set. It is represented as <span class="jsonly">
+<li>Cost function: Function that returns the error of the hypothesis function and the actual correct values in the training set. It is represented as 
+<span class="jsonly">
                 
     \(J(\theta)\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;J%28%5ctheta%29" title="J(\theta)" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;J%28%5ctheta%29" title="J(\theta)" />
   
-</noscript>, taking our parameters used to make the prediction (<span class="jsonly">
+</noscript>
+, taking our parameters used to make the prediction (
+<span class="jsonly">
                 
     \(\theta\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta" title="\theta" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta" title="\theta" />
   
-</noscript>) as input.</li>
-<li>We try to find values of <span class="jsonly">
+</noscript>
+) as input.</li>
+<li>We try to find values of 
+<span class="jsonly">
                 
     \(\theta\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta" title="\theta" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta" title="\theta" />
   
-</noscript> which minimize the cost function, because the lower the cost function, the lower our error is. We do this by finding the global minimum.</li>
+</noscript>
+ which minimize the cost function, because the lower the cost function, the lower our error is. We do this by finding the global minimum.</li>
 </ul>
 </li>
 <li>Normal Equation: An equation to calculate the minimum without the need for gradient descent. We will talk about this later.</li>
@@ -180,216 +194,259 @@
 <h1 id="notation">Notation</h1>
 <p>Common idiomatic notation used in machine learning and linear algebra, used throughout these notes.</p>
 <ul>
-<li><span class="jsonly">
+<li>
+<span class="jsonly">
                 
     \(\theta\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta" title="\theta" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta" title="\theta" />
   
-</noscript> - Vector of parameters</li>
-<li><span class="jsonly">
+</noscript>
+ - Vector of parameters</li>
+<li>
+<span class="jsonly">
                 
     \(x\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x" title="x" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x" title="x" />
   
-</noscript> - Matrix of features</li>
-<li><span class="jsonly">
+</noscript>
+ - Matrix of features</li>
+<li>
+<span class="jsonly">
                 
     \(n\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;n" title="n" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;n" title="n" />
   
-</noscript> - Number of features</li>
-<li><span class="jsonly">
+</noscript>
+ - Number of features</li>
+<li>
+<span class="jsonly">
                 
     \(m\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;m" title="m" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;m" title="m" />
   
-</noscript> - Number of training examples</li>
-<li><span class="jsonly">
+</noscript>
+ - Number of training examples</li>
+<li>
+<span class="jsonly">
                 
     \(y\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;y" title="y" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;y" title="y" />
   
-</noscript> - The correct values for each set of features in the training set</li>
-<li><span class="jsonly">
+</noscript>
+ - The correct values for each set of features in the training set</li>
+<li>
+<span class="jsonly">
                 
     \(h_{\theta}(x)\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;h_%7b%5ctheta%7d%28x%29" title="h_{\theta}(x)" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;h_%7b%5ctheta%7d%28x%29" title="h_{\theta}(x)" />
   
-</noscript> - Hypothesis function</li>
-<li><span class="jsonly">
+</noscript>
+ - Hypothesis function</li>
+<li>
+<span class="jsonly">
                 
     \(J(\theta)\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;J%28%5ctheta%29" title="J(\theta)" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;J%28%5ctheta%29" title="J(\theta)" />
   
-</noscript> - Cost function</li>
+</noscript>
+ - Cost function</li>
 </ul>
-<p>Given a matrix <span class="jsonly">
+<p>Given a matrix 
+<span class="jsonly">
                 
     \(A\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;A" title="A" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;A" title="A" />
   
-</noscript>:</p>
+</noscript>
+:</p>
 <ul>
-<li><span class="jsonly">
+<li>
+<span class="jsonly">
                 
     \(A_{ij}\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;A_%7bij%7d" title="A_{ij}" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;A_%7bij%7d" title="A_{ij}" />
   
-</noscript> - the entry in the <span class="jsonly">
+</noscript>
+ - the entry in the 
+<span class="jsonly">
                 
     \(i^{th}\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;i%5e%7bth%7d" title="i^{th}" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;i%5e%7bth%7d" title="i^{th}" />
   
-</noscript> row, <span class="jsonly">
+</noscript>
+ row, 
+<span class="jsonly">
                 
     \(j^{th}\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;j%5e%7bth%7d" title="j^{th}" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;j%5e%7bth%7d" title="j^{th}" />
   
-</noscript> column</li>
-<li><span class="jsonly">
+</noscript>
+ column</li>
+<li>
+<span class="jsonly">
                 
     \(A^T\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;A%5eT" title="A^T" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;A%5eT" title="A^T" />
   
-</noscript> - the transpose of <span class="jsonly">
+</noscript>
+ - the transpose of 
+<span class="jsonly">
                 
     \(A\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;A" title="A" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;A" title="A" />
   
-</noscript></li>
-<li><span class="jsonly">
+</noscript>
+</li>
+<li>
+<span class="jsonly">
                 
     \(A^{\prime}\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;A%5e%7b%5cprime%7d" title="A^{\prime}" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;A%5e%7b%5cprime%7d" title="A^{\prime}" />
   
-</noscript> - the inverse of <span class="jsonly">
+</noscript>
+ - the inverse of 
+<span class="jsonly">
                 
     \(A\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;A" title="A" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;A" title="A" />
   
-</noscript></li>
+</noscript>
+</li>
 </ul>
-<p>For our matrix of features <span class="jsonly">
+<p>For our matrix of features 
+<span class="jsonly">
                 
     \(x\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x" title="x" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x" title="x" />
   
-</noscript>:</p>
+</noscript>
+:</p>
 <ul>
-<li><span class="jsonly">
+<li>
+<span class="jsonly">
                 
     \(x^{(i)}\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x%5e%7b%28i%29%7d" title="x^{(i)}" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x%5e%7b%28i%29%7d" title="x^{(i)}" />
   
-</noscript> - vector of the features in the <span class="jsonly">
+</noscript>
+ - vector of the features in the 
+<span class="jsonly">
                 
     \(i^{th}\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;i%5e%7bth%7d" title="i^{th}" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;i%5e%7bth%7d" title="i^{th}" />
   
-</noscript> training example</li>
-<li><span class="jsonly">
+</noscript>
+ training example</li>
+<li>
+<span class="jsonly">
                 
     \(x^{(i)}_{j}\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x%5e%7b%28i%29%7d_%7bj%7d" title="x^{(i)}_{j}" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x%5e%7b%28i%29%7d_%7bj%7d" title="x^{(i)}_{j}" />
   
-</noscript> - value of feature <span class="jsonly">
+</noscript>
+ - value of feature 
+<span class="jsonly">
                 
     \(j\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;j" title="j" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;j" title="j" />
   
-</noscript> in the <span class="jsonly">
+</noscript>
+ in the 
+<span class="jsonly">
                 
     \(i^{th}\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;i%5e%7bth%7d" title="i^{th}" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;i%5e%7bth%7d" title="i^{th}" />
   
-</noscript> training example</li>
+</noscript>
+ training example</li>
 </ul>
 <h1 id="linear-regression">Linear Regression</h1>
 <p>Linear regression fits a model to a straight line dataset, therefore our hypothesis function for univariate (one feature) linear regression is:</p>
+
 <span class="jsonly">
    
     $$h_{\theta}(x) = \theta_0 &#43; \theta_1x$$
@@ -398,39 +455,47 @@
 <noscript>
    
     <div style="text-align:center;">
-      <img src="https://latex.codecogs.com/png.latex?h_%7b%5ctheta%7d%28x%29%20%3d%20%5ctheta_0%20%2b%20%5ctheta_1x" title="h_{\theta}(x) = \theta_0 &#43; \theta_1x" />
+      <img src="https://latex.codecogs.com/svg.latex?h_%7b%5ctheta%7d%28x%29%20%3d%20%5ctheta_0%20%2b%20%5ctheta_1x" title="h_{\theta}(x) = \theta_0 &#43; \theta_1x" />
     </div>
   
 </noscript>
-<p>This is a basic 2D straight line, where <span class="jsonly">
+
+<p>This is a basic 2D straight line, where 
+<span class="jsonly">
                 
     \(x\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x" title="x" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x" title="x" />
   
-</noscript> is our feature and we are trying to learn the bias parameter <span class="jsonly">
+</noscript>
+ is our feature and we are trying to learn the bias parameter 
+<span class="jsonly">
                 
     \(\theta_0\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta_0" title="\theta_0" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta_0" title="\theta_0" />
   
-</noscript> and the weight parameter <span class="jsonly">
+</noscript>
+ and the weight parameter 
+<span class="jsonly">
                 
     \(\theta_1\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta_1" title="\theta_1" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta_1" title="\theta_1" />
   
-</noscript>. We only have a single feature parameter because we only have one feature.</p>
+</noscript>
+. We only have a single feature parameter because we only have one feature.</p>
 <p>If we do the same for multiple features, we will get a linear multi-dimensional equation:</p>
+
 <span class="jsonly">
    
     $$h_{\theta}(x) = \theta_0 &#43; \theta_1x_1 &#43; \theta_2x_2 &#43; \cdots &#43; \theta_nx_n$$
@@ -439,83 +504,101 @@
 <noscript>
    
     <div style="text-align:center;">
-      <img src="https://latex.codecogs.com/png.latex?h_%7b%5ctheta%7d%28x%29%20%3d%20%5ctheta_0%20%2b%20%5ctheta_1x_1%20%2b%20%5ctheta_2x_2%20%2b%20%5ccdots%20%2b%20%5ctheta_nx_n" title="h_{\theta}(x) = \theta_0 &#43; \theta_1x_1 &#43; \theta_2x_2 &#43; \cdots &#43; \theta_nx_n" />
+      <img src="https://latex.codecogs.com/svg.latex?h_%7b%5ctheta%7d%28x%29%20%3d%20%5ctheta_0%20%2b%20%5ctheta_1x_1%20%2b%20%5ctheta_2x_2%20%2b%20%5ccdots%20%2b%20%5ctheta_nx_n" title="h_{\theta}(x) = \theta_0 &#43; \theta_1x_1 &#43; \theta_2x_2 &#43; \cdots &#43; \theta_nx_n" />
     </div>
   
 </noscript>
-<p>Where <span class="jsonly">
+
+<p>Where 
+<span class="jsonly">
                 
     \(n\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;n" title="n" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;n" title="n" />
   
-</noscript> is the number of features. Each feature (the <span class="jsonly">
+</noscript>
+ is the number of features. Each feature (the 
+<span class="jsonly">
                 
     \(x\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x" title="x" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x" title="x" />
   
-</noscript> terms) has a weight parameter (<span class="jsonly">
+</noscript>
+ terms) has a weight parameter (
+<span class="jsonly">
                 
     \(\theta_1\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta_1" title="\theta_1" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta_1" title="\theta_1" />
   
-</noscript> through <span class="jsonly">
+</noscript>
+ through 
+<span class="jsonly">
                 
     \(\theta_n\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta_n" title="\theta_n" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta_n" title="\theta_n" />
   
-</noscript>), and each of the individual bias terms are collected into one term <span class="jsonly">
+</noscript>
+), and each of the individual bias terms are collected into one term 
+<span class="jsonly">
                 
     \(\theta_0\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta_0" title="\theta_0" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta_0" title="\theta_0" />
   
-</noscript>. Notice how the input <span class="jsonly">
+</noscript>
+. Notice how the input 
+<span class="jsonly">
                 
     \(x\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x" title="x" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x" title="x" />
   
-</noscript> is no longer a single value, and is instead a collection of values <span class="jsonly">
+</noscript>
+ is no longer a single value, and is instead a collection of values 
+<span class="jsonly">
                 
     \(x_1, x_2, x_3 \cdots x_n\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x_1%2c%20x_2%2c%20x_3%20%5ccdots%20x_n" title="x_1, x_2, x_3 \cdots x_n" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x_1%2c%20x_2%2c%20x_3%20%5ccdots%20x_n" title="x_1, x_2, x_3 \cdots x_n" />
   
-</noscript>, which we can represent as a column vector. We can do the same thing with our <span class="jsonly">
+</noscript>
+, which we can represent as a column vector. We can do the same thing with our 
+<span class="jsonly">
                 
     \(\theta\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta" title="\theta" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta" title="\theta" />
   
-</noscript> values:</p>
+</noscript>
+ values:</p>
+
 <span class="jsonly">
    
     $$x = \begin{bmatrix} x_0 = 1 \\ x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix} \ \ \ \ \ \ \theta = \begin{bmatrix} \theta_0 \\ \theta_1 \\ \theta_2 \\ \vdots \\ \theta_n \end{bmatrix}$$
@@ -524,66 +607,80 @@
 <noscript>
    
     <div style="text-align:center;">
-      <img src="https://latex.codecogs.com/png.latex?x%20%3d%20%5cbegin%7bbmatrix%7d%20x_0%20%3d%201%20%5c%5c%20x_1%20%5c%5c%20x_2%20%5c%5c%20%5cvdots%20%5c%5c%20x_n%20%5cend%7bbmatrix%7d%20%5c%20%5c%20%5c%20%5c%20%5c%20%5c%20%5ctheta%20%3d%20%5cbegin%7bbmatrix%7d%20%5ctheta_0%20%5c%5c%20%5ctheta_1%20%5c%5c%20%5ctheta_2%20%5c%5c%20%5cvdots%20%5c%5c%20%5ctheta_n%20%5cend%7bbmatrix%7d" title="x = \begin{bmatrix} x_0 = 1 \\ x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix} \ \ \ \ \ \ \theta = \begin{bmatrix} \theta_0 \\ \theta_1 \\ \theta_2 \\ \vdots \\ \theta_n \end{bmatrix}" />
+      <img src="https://latex.codecogs.com/svg.latex?x%20%3d%20%5cbegin%7bbmatrix%7d%20x_0%20%3d%201%20%5c%5c%20x_1%20%5c%5c%20x_2%20%5c%5c%20%5cvdots%20%5c%5c%20x_n%20%5cend%7bbmatrix%7d%20%5c%20%5c%20%5c%20%5c%20%5c%20%5c%20%5ctheta%20%3d%20%5cbegin%7bbmatrix%7d%20%5ctheta_0%20%5c%5c%20%5ctheta_1%20%5c%5c%20%5ctheta_2%20%5c%5c%20%5cvdots%20%5c%5c%20%5ctheta_n%20%5cend%7bbmatrix%7d" title="x = \begin{bmatrix} x_0 = 1 \\ x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix} \ \ \ \ \ \ \theta = \begin{bmatrix} \theta_0 \\ \theta_1 \\ \theta_2 \\ \vdots \\ \theta_n \end{bmatrix}" />
     </div>
   
 </noscript>
-<p>Notice how we have added an extra <span class="jsonly">
+
+<p>Notice how we have added an extra 
+<span class="jsonly">
                 
     \(x_0\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x_0" title="x_0" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x_0" title="x_0" />
   
-</noscript> term into the start of the <span class="jsonly">
+</noscript>
+ term into the start of the 
+<span class="jsonly">
                 
     \(x\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x" title="x" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x" title="x" />
   
-</noscript> vector, and we set it equal to 1. This corresponds to the bias term <span class="jsonly">
+</noscript>
+ vector, and we set it equal to 1. This corresponds to the bias term 
+<span class="jsonly">
                 
     \(\theta_0\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta_0" title="\theta_0" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta_0" title="\theta_0" />
   
-</noscript>, which we used in the hypothesis equations. We do this because <span class="jsonly">
+</noscript>
+, which we used in the hypothesis equations. We do this because 
+<span class="jsonly">
                 
     \(\theta_0 &#43; \theta_1 x_1 &#43; \cdots &#43; \theta_n x_n= \theta_0 x_0 &#43; \theta_1 x_1 &#43; \cdots &#43; \theta_n x_n\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta_0%20%2b%20%5ctheta_1%20x_1%20%2b%20%5ccdots%20%2b%20%5ctheta_n%20x_n%3d%20%5ctheta_0%20x_0%20%2b%20%5ctheta_1%20x_1%20%2b%20%5ccdots%20%2b%20%5ctheta_n%20x_n" title="\theta_0 &#43; \theta_1 x_1 &#43; \cdots &#43; \theta_n x_n= \theta_0 x_0 &#43; \theta_1 x_1 &#43; \cdots &#43; \theta_n x_n" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta_0%20%2b%20%5ctheta_1%20x_1%20%2b%20%5ccdots%20%2b%20%5ctheta_n%20x_n%3d%20%5ctheta_0%20x_0%20%2b%20%5ctheta_1%20x_1%20%2b%20%5ccdots%20%2b%20%5ctheta_n%20x_n" title="\theta_0 &#43; \theta_1 x_1 &#43; \cdots &#43; \theta_n x_n= \theta_0 x_0 &#43; \theta_1 x_1 &#43; \cdots &#43; \theta_n x_n" />
   
-</noscript> if <span class="jsonly">
+</noscript>
+ if 
+<span class="jsonly">
                 
     \(x_0 = 1\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x_0%20%3d%201" title="x_0 = 1" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x_0%20%3d%201" title="x_0 = 1" />
   
-</noscript>. This also matches the dimensions of both vectors, enabling us to do operations such as multiplication with them.</p>
-<p>With our two matrices, we can write out a vectorized version of the hypothesis function as <span class="jsonly">
+</noscript>
+. This also matches the dimensions of both vectors, enabling us to do operations such as multiplication with them.</p>
+<p>With our two matrices, we can write out a vectorized version of the hypothesis function as 
+<span class="jsonly">
                 
     \(\theta^T x\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta%5eT%20x" title="\theta^T x" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta%5eT%20x" title="\theta^T x" />
   
-</noscript>, which we can see is equivalent to our original equation:</p>
+</noscript>
+, which we can see is equivalent to our original equation:</p>
+
 <span class="jsonly">
    
     $$h_{\theta}(x) = \theta^T x = \begin{bmatrix} \theta_0 &amp; \theta_1 &amp; \theta_2 &amp; \cdots &amp; \theta_n \end{bmatrix} \times \begin{bmatrix} 1 \\ x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix} = \theta_0 &#43; \theta_1 x_1 &#43; \theta_2 x_2 &#43; \cdots &#43; \theta_n x_n$$
@@ -592,21 +689,25 @@
 <noscript>
    
     <div style="text-align:center;">
-      <img src="https://latex.codecogs.com/png.latex?h_%7b%5ctheta%7d%28x%29%20%3d%20%5ctheta%5eT%20x%20%3d%20%5cbegin%7bbmatrix%7d%20%5ctheta_0%20%26%20%5ctheta_1%20%26%20%5ctheta_2%20%26%20%5ccdots%20%26%20%5ctheta_n%20%5cend%7bbmatrix%7d%20%5ctimes%20%5cbegin%7bbmatrix%7d%201%20%5c%5c%20x_1%20%5c%5c%20x_2%20%5c%5c%20%5cvdots%20%5c%5c%20x_n%20%5cend%7bbmatrix%7d%20%3d%20%5ctheta_0%20%2b%20%5ctheta_1%20x_1%20%2b%20%5ctheta_2%20x_2%20%2b%20%5ccdots%20%2b%20%5ctheta_n%20x_n" title="h_{\theta}(x) = \theta^T x = \begin{bmatrix} \theta_0 &amp; \theta_1 &amp; \theta_2 &amp; \cdots &amp; \theta_n \end{bmatrix} \times \begin{bmatrix} 1 \\ x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix} = \theta_0 &#43; \theta_1 x_1 &#43; \theta_2 x_2 &#43; \cdots &#43; \theta_n x_n" />
+      <img src="https://latex.codecogs.com/svg.latex?h_%7b%5ctheta%7d%28x%29%20%3d%20%5ctheta%5eT%20x%20%3d%20%5cbegin%7bbmatrix%7d%20%5ctheta_0%20%26%20%5ctheta_1%20%26%20%5ctheta_2%20%26%20%5ccdots%20%26%20%5ctheta_n%20%5cend%7bbmatrix%7d%20%5ctimes%20%5cbegin%7bbmatrix%7d%201%20%5c%5c%20x_1%20%5c%5c%20x_2%20%5c%5c%20%5cvdots%20%5c%5c%20x_n%20%5cend%7bbmatrix%7d%20%3d%20%5ctheta_0%20%2b%20%5ctheta_1%20x_1%20%2b%20%5ctheta_2%20x_2%20%2b%20%5ccdots%20%2b%20%5ctheta_n%20x_n" title="h_{\theta}(x) = \theta^T x = \begin{bmatrix} \theta_0 &amp; \theta_1 &amp; \theta_2 &amp; \cdots &amp; \theta_n \end{bmatrix} \times \begin{bmatrix} 1 \\ x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix} = \theta_0 &#43; \theta_1 x_1 &#43; \theta_2 x_2 &#43; \cdots &#43; \theta_n x_n" />
     </div>
   
 </noscript>
+
 <h2 id="gradient-descent">Gradient Descent</h2>
-<p>One way to learn the values of <span class="jsonly">
+<p>One way to learn the values of 
+<span class="jsonly">
                 
     \(\theta\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta" title="\theta" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta" title="\theta" />
   
-</noscript> is gradient descent. In order to implement this, we need a cost function which calculates the error of our hypothesis function above. There are a variety of cost functions that could be used, but the typical one for simple regression is a variation on the average of the <a href="https://en.wikipedia.org/wiki/Variance">squared error</a>:</p>
+</noscript>
+ is gradient descent. In order to implement this, we need a cost function which calculates the error of our hypothesis function above. There are a variety of cost functions that could be used, but the typical one for simple regression is a variation on the average of the <a href="https://en.wikipedia.org/wiki/Variance">squared error</a>:</p>
+
 <span class="jsonly">
    
     $$J(\theta) = \dfrac{1}{2m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})^2$$
@@ -615,86 +716,104 @@
 <noscript>
    
     <div style="text-align:center;">
-      <img src="https://latex.codecogs.com/png.latex?J%28%5ctheta%29%20%3d%20%5cdfrac%7b1%7d%7b2m%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29%5e2" title="J(\theta) = \dfrac{1}{2m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})^2" />
+      <img src="https://latex.codecogs.com/svg.latex?J%28%5ctheta%29%20%3d%20%5cdfrac%7b1%7d%7b2m%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29%5e2" title="J(\theta) = \dfrac{1}{2m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})^2" />
     </div>
   
 </noscript>
-<p>Recall that <span class="jsonly">
+
+<p>Recall that 
+<span class="jsonly">
                 
     \(m\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;m" title="m" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;m" title="m" />
   
-</noscript> represents the number of training examples we have, and <span class="jsonly">
+</noscript>
+ represents the number of training examples we have, and 
+<span class="jsonly">
                 
     \(y\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;y" title="y" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;y" title="y" />
   
-</noscript> represents the actual correct predictions for each set of <span class="jsonly">
+</noscript>
+ represents the actual correct predictions for each set of 
+<span class="jsonly">
                 
     \(x\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x" title="x" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x" title="x" />
   
-</noscript> features in our training set. What this function does is for each of our training sets, take the value of the hypothesis for that set (<span class="jsonly">
+</noscript>
+ features in our training set. What this function does is for each of our training sets, take the value of the hypothesis for that set (
+<span class="jsonly">
                 
     \(h_{\theta}(x^{(i)})\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29" title="h_{\theta}(x^{(i)})" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29" title="h_{\theta}(x^{(i)})" />
   
-</noscript>), and calculate the difference between it and the corresponding actual value, then square that difference. This guarantees a positive value. We then sum up each one of these squared positive values, then divides by <span class="jsonly">
+</noscript>
+), and calculate the difference between it and the corresponding actual value, then square that difference. This guarantees a positive value. We then sum up each one of these squared positive values, then divides by 
+<span class="jsonly">
                 
     \(2m\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;2m" title="2m" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;2m" title="2m" />
   
-</noscript>, a slight variation on calculating the squared mean error (which would just be dividing by <span class="jsonly">
+</noscript>
+, a slight variation on calculating the squared mean error (which would just be dividing by 
+<span class="jsonly">
                 
     \(m\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;m" title="m" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;m" title="m" />
   
-</noscript> only). The reason we also divide by 2 is because it makes the derivative nicer, as the term inside the summation is squared. When we derive this, will end up with a coefficient of 2 in front, which will nicely cancel with the 2 in the denominator.</p>
-<p>The actual gradient descent step comes from finding values of <span class="jsonly">
+</noscript>
+ only). The reason we also divide by 2 is because it makes the derivative nicer, as the term inside the summation is squared. When we derive this, will end up with a coefficient of 2 in front, which will nicely cancel with the 2 in the denominator.</p>
+<p>The actual gradient descent step comes from finding values of 
+<span class="jsonly">
                 
     \(\theta\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta" title="\theta" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta" title="\theta" />
   
-</noscript> that minimize this function the most, in other words, the global minimum. At the minimum point, the derivative (in this case the partial derivative) of the cost function in terms of <span class="jsonly">
+</noscript>
+ that minimize this function the most, in other words, the global minimum. At the minimum point, the derivative (in this case the partial derivative) of the cost function in terms of 
+<span class="jsonly">
                 
     \(\theta\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta" title="\theta" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta" title="\theta" />
   
-</noscript> will be 0. We can calculate the derivative as follows:
+</noscript>
+ will be 0. We can calculate the derivative as follows:
 <br />
 <br /></p>
+
 <span class="jsonly">
    
     $$\begin{align*} \dfrac{\delta}{\delta\theta} J(\theta) &amp;= \dfrac{1}{2m} \cdot \dfrac{\delta}{\delta\theta} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})^2  &amp;\text{(Note: } m \text{ is a constant)} \\ &amp;= \dfrac{1}{2m} \cdot \sum_{i=1}^n \dfrac{\delta}{\delta \theta} (\theta^T x^{(i)} - y^{(i)})^2  &amp;(h_{\theta}(x^{(i)}) \text{ is substituted for } \theta^T x^{(i)}) \\ &amp;= \dfrac{1}{2m} \cdot \sum_{i=1}^m \:2(\theta^Tx^{(i)} - y ^{(i)}) \cdot x^{(i)} &amp;\text{(Note: } y^{(i)} \text{ is a constant)} \\ &amp;= \dfrac{1}{m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})x^{(i)}  &amp;\text{(Simplify and substitute back } h_{\theta}(x^{(i)}))\end{align*}$$
@@ -703,47 +822,57 @@
 <noscript>
    
     <div style="text-align:center;">
-      <img src="https://latex.codecogs.com/png.latex?%5cbegin%7balign%2a%7d%20%5cdfrac%7b%5cdelta%7d%7b%5cdelta%5ctheta%7d%20J%28%5ctheta%29%20%26%3d%20%5cdfrac%7b1%7d%7b2m%7d%20%5ccdot%20%5cdfrac%7b%5cdelta%7d%7b%5cdelta%5ctheta%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29%5e2%20%20%26%5ctext%7b%28Note%3a%20%7d%20m%20%5ctext%7b%20is%20a%20constant%29%7d%20%5c%5c%20%26%3d%20%5cdfrac%7b1%7d%7b2m%7d%20%5ccdot%20%5csum_%7bi%3d1%7d%5en%20%5cdfrac%7b%5cdelta%7d%7b%5cdelta%20%5ctheta%7d%20%28%5ctheta%5eT%20x%5e%7b%28i%29%7d%20-%20y%5e%7b%28i%29%7d%29%5e2%20%20%26%28h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%20%5ctext%7b%20is%20substituted%20for%20%7d%20%5ctheta%5eT%20x%5e%7b%28i%29%7d%29%20%5c%5c%20%26%3d%20%5cdfrac%7b1%7d%7b2m%7d%20%5ccdot%20%5csum_%7bi%3d1%7d%5em%20%5c%3a2%28%5ctheta%5eTx%5e%7b%28i%29%7d%20-%20y%20%5e%7b%28i%29%7d%29%20%5ccdot%20x%5e%7b%28i%29%7d%20%26%5ctext%7b%28Note%3a%20%7d%20y%5e%7b%28i%29%7d%20%5ctext%7b%20is%20a%20constant%29%7d%20%5c%5c%20%26%3d%20%5cdfrac%7b1%7d%7bm%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29x%5e%7b%28i%29%7d%20%20%26%5ctext%7b%28Simplify%20and%20substitute%20back%20%7d%20h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%29%5cend%7balign%2a%7d" title="\begin{align*} \dfrac{\delta}{\delta\theta} J(\theta) &amp;= \dfrac{1}{2m} \cdot \dfrac{\delta}{\delta\theta} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})^2  &amp;\text{(Note: } m \text{ is a constant)} \\ &amp;= \dfrac{1}{2m} \cdot \sum_{i=1}^n \dfrac{\delta}{\delta \theta} (\theta^T x^{(i)} - y^{(i)})^2  &amp;(h_{\theta}(x^{(i)}) \text{ is substituted for } \theta^T x^{(i)}) \\ &amp;= \dfrac{1}{2m} \cdot \sum_{i=1}^m \:2(\theta^Tx^{(i)} - y ^{(i)}) \cdot x^{(i)} &amp;\text{(Note: } y^{(i)} \text{ is a constant)} \\ &amp;= \dfrac{1}{m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})x^{(i)}  &amp;\text{(Simplify and substitute back } h_{\theta}(x^{(i)}))\end{align*}" />
+      <img src="https://latex.codecogs.com/svg.latex?%5cbegin%7balign%2a%7d%20%5cdfrac%7b%5cdelta%7d%7b%5cdelta%5ctheta%7d%20J%28%5ctheta%29%20%26%3d%20%5cdfrac%7b1%7d%7b2m%7d%20%5ccdot%20%5cdfrac%7b%5cdelta%7d%7b%5cdelta%5ctheta%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29%5e2%20%20%26%5ctext%7b%28Note%3a%20%7d%20m%20%5ctext%7b%20is%20a%20constant%29%7d%20%5c%5c%20%26%3d%20%5cdfrac%7b1%7d%7b2m%7d%20%5ccdot%20%5csum_%7bi%3d1%7d%5en%20%5cdfrac%7b%5cdelta%7d%7b%5cdelta%20%5ctheta%7d%20%28%5ctheta%5eT%20x%5e%7b%28i%29%7d%20-%20y%5e%7b%28i%29%7d%29%5e2%20%20%26%28h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%20%5ctext%7b%20is%20substituted%20for%20%7d%20%5ctheta%5eT%20x%5e%7b%28i%29%7d%29%20%5c%5c%20%26%3d%20%5cdfrac%7b1%7d%7b2m%7d%20%5ccdot%20%5csum_%7bi%3d1%7d%5em%20%5c%3a2%28%5ctheta%5eTx%5e%7b%28i%29%7d%20-%20y%20%5e%7b%28i%29%7d%29%20%5ccdot%20x%5e%7b%28i%29%7d%20%26%5ctext%7b%28Note%3a%20%7d%20y%5e%7b%28i%29%7d%20%5ctext%7b%20is%20a%20constant%29%7d%20%5c%5c%20%26%3d%20%5cdfrac%7b1%7d%7bm%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29x%5e%7b%28i%29%7d%20%20%26%5ctext%7b%28Simplify%20and%20substitute%20back%20%7d%20h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%29%5cend%7balign%2a%7d" title="\begin{align*} \dfrac{\delta}{\delta\theta} J(\theta) &amp;= \dfrac{1}{2m} \cdot \dfrac{\delta}{\delta\theta} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})^2  &amp;\text{(Note: } m \text{ is a constant)} \\ &amp;= \dfrac{1}{2m} \cdot \sum_{i=1}^n \dfrac{\delta}{\delta \theta} (\theta^T x^{(i)} - y^{(i)})^2  &amp;(h_{\theta}(x^{(i)}) \text{ is substituted for } \theta^T x^{(i)}) \\ &amp;= \dfrac{1}{2m} \cdot \sum_{i=1}^m \:2(\theta^Tx^{(i)} - y ^{(i)}) \cdot x^{(i)} &amp;\text{(Note: } y^{(i)} \text{ is a constant)} \\ &amp;= \dfrac{1}{m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})x^{(i)}  &amp;\text{(Simplify and substitute back } h_{\theta}(x^{(i)}))\end{align*}" />
     </div>
   
 </noscript>
-<p>One way to get to the minimum is to repeatedly subtract the value of the derivative from the old <span class="jsonly">
+
+<p>One way to get to the minimum is to repeatedly subtract the value of the derivative from the old 
+<span class="jsonly">
                 
     \(\theta\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta" title="\theta" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta" title="\theta" />
   
-</noscript> value. By doing this, when the derivative is positive (indicating we are to the right of the minimum), <span class="jsonly">
+</noscript>
+ value. By doing this, when the derivative is positive (indicating we are to the right of the minimum), 
+<span class="jsonly">
                 
     \(\theta\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta" title="\theta" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta" title="\theta" />
   
-</noscript> will be lowered (move to the left), when the derivative is negative (indicating we are to the left of the minimum), <span class="jsonly">
+</noscript>
+ will be lowered (move to the left), when the derivative is negative (indicating we are to the left of the minimum), 
+<span class="jsonly">
                 
     \(\theta\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta" title="\theta" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta" title="\theta" />
   
-</noscript> will be raised (move to the right). Thus, with many iterations of this, we will eventually approach the minimum. Here is the mathematical representation (the <span class="jsonly">
+</noscript>
+ will be raised (move to the right). Thus, with many iterations of this, we will eventually approach the minimum. Here is the mathematical representation (the 
+<span class="jsonly">
                 
     \(:=\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%3a%3d" title=":=" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%3a%3d" title=":=" />
   
-</noscript> is used to show that we are updating the value, rather than as an equality operator):</p>
+</noscript>
+ is used to show that we are updating the value, rather than as an equality operator):</p>
+
 <span class="jsonly">
    
     $$\begin{align*} &amp; \text{For } j = 0, \cdots, n \\ &amp; \text{repeat until convergence \{} \\ &amp; \qquad \theta_j := \theta_j - \alpha \dfrac{\delta}{\delta \theta_j} J(\theta) \\ &amp;\}\end{align*}$$
@@ -752,29 +881,35 @@
 <noscript>
    
     <div style="text-align:center;">
-      <img src="https://latex.codecogs.com/png.latex?%5cbegin%7balign%2a%7d%20%26%20%5ctext%7bFor%20%7d%20j%20%3d%200%2c%20%5ccdots%2c%20n%20%5c%5c%20%26%20%5ctext%7brepeat%20until%20convergence%20%5c%7b%7d%20%5c%5c%20%26%20%5cqquad%20%5ctheta_j%20%3a%3d%20%5ctheta_j%20-%20%5calpha%20%5cdfrac%7b%5cdelta%7d%7b%5cdelta%20%5ctheta_j%7d%20J%28%5ctheta%29%20%5c%5c%20%26%5c%7d%5cend%7balign%2a%7d" title="\begin{align*} &amp; \text{For } j = 0, \cdots, n \\ &amp; \text{repeat until convergence \{} \\ &amp; \qquad \theta_j := \theta_j - \alpha \dfrac{\delta}{\delta \theta_j} J(\theta) \\ &amp;\}\end{align*}" />
+      <img src="https://latex.codecogs.com/svg.latex?%5cbegin%7balign%2a%7d%20%26%20%5ctext%7bFor%20%7d%20j%20%3d%200%2c%20%5ccdots%2c%20n%20%5c%5c%20%26%20%5ctext%7brepeat%20until%20convergence%20%5c%7b%7d%20%5c%5c%20%26%20%5cqquad%20%5ctheta_j%20%3a%3d%20%5ctheta_j%20-%20%5calpha%20%5cdfrac%7b%5cdelta%7d%7b%5cdelta%20%5ctheta_j%7d%20J%28%5ctheta%29%20%5c%5c%20%26%5c%7d%5cend%7balign%2a%7d" title="\begin{align*} &amp; \text{For } j = 0, \cdots, n \\ &amp; \text{repeat until convergence \{} \\ &amp; \qquad \theta_j := \theta_j - \alpha \dfrac{\delta}{\delta \theta_j} J(\theta) \\ &amp;\}\end{align*}" />
     </div>
   
 </noscript>
-<p>Substituting the derivative we took above. <span class="jsonly">
+
+<p>Substituting the derivative we took above. 
+<span class="jsonly">
                 
     \(x^{(i)}\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x%5e%7b%28i%29%7d" title="x^{(i)}" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x%5e%7b%28i%29%7d" title="x^{(i)}" />
   
-</noscript> is replaced with <span class="jsonly">
+</noscript>
+ is replaced with 
+<span class="jsonly">
                 
     \(x^{(i)}_j\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x%5e%7b%28i%29%7d_j" title="x^{(i)}_j" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x%5e%7b%28i%29%7d_j" title="x^{(i)}_j" />
   
-</noscript> because when dealing with multiple features, we mean to say the feature set for the specific training example:</p>
+</noscript>
+ because when dealing with multiple features, we mean to say the feature set for the specific training example:</p>
+
 <span class="jsonly">
    
     $$\begin{align*} &amp; \text{For } j = 0, \cdots, n \\ &amp; \text{repeat until convergence \{} \\ &amp; \qquad \theta_j := \theta_j - \dfrac{\alpha}{m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})x^{(i)}_j \\ &amp;\}\end{align*}$$
@@ -783,57 +918,69 @@
 <noscript>
    
     <div style="text-align:center;">
-      <img src="https://latex.codecogs.com/png.latex?%5cbegin%7balign%2a%7d%20%26%20%5ctext%7bFor%20%7d%20j%20%3d%200%2c%20%5ccdots%2c%20n%20%5c%5c%20%26%20%5ctext%7brepeat%20until%20convergence%20%5c%7b%7d%20%5c%5c%20%26%20%5cqquad%20%5ctheta_j%20%3a%3d%20%5ctheta_j%20-%20%5cdfrac%7b%5calpha%7d%7bm%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29x%5e%7b%28i%29%7d_j%20%5c%5c%20%26%5c%7d%5cend%7balign%2a%7d" title="\begin{align*} &amp; \text{For } j = 0, \cdots, n \\ &amp; \text{repeat until convergence \{} \\ &amp; \qquad \theta_j := \theta_j - \dfrac{\alpha}{m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})x^{(i)}_j \\ &amp;\}\end{align*}" />
+      <img src="https://latex.codecogs.com/svg.latex?%5cbegin%7balign%2a%7d%20%26%20%5ctext%7bFor%20%7d%20j%20%3d%200%2c%20%5ccdots%2c%20n%20%5c%5c%20%26%20%5ctext%7brepeat%20until%20convergence%20%5c%7b%7d%20%5c%5c%20%26%20%5cqquad%20%5ctheta_j%20%3a%3d%20%5ctheta_j%20-%20%5cdfrac%7b%5calpha%7d%7bm%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29x%5e%7b%28i%29%7d_j%20%5c%5c%20%26%5c%7d%5cend%7balign%2a%7d" title="\begin{align*} &amp; \text{For } j = 0, \cdots, n \\ &amp; \text{repeat until convergence \{} \\ &amp; \qquad \theta_j := \theta_j - \dfrac{\alpha}{m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})x^{(i)}_j \\ &amp;\}\end{align*}" />
     </div>
   
 </noscript>
-<p>We have added a new variable: <span class="jsonly">
+
+<p>We have added a new variable: 
+<span class="jsonly">
                 
     \(\alpha\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5calpha" title="\alpha" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5calpha" title="\alpha" />
   
-</noscript>. This is called the learning rate, and as you can probably guess from the equation, it corresponds to the size of step we take with each iteration. A large <span class="jsonly">
+</noscript>
+. This is called the learning rate, and as you can probably guess from the equation, it corresponds to the size of step we take with each iteration. A large 
+<span class="jsonly">
                 
     \(\alpha\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5calpha" title="\alpha" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5calpha" title="\alpha" />
   
-</noscript> value will lead to subtracting or adding larger values to <span class="jsonly">
+</noscript>
+ value will lead to subtracting or adding larger values to 
+<span class="jsonly">
                 
     \(\theta_j\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta_j" title="\theta_j" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta_j" title="\theta_j" />
   
-</noscript> each time. Too small of a learning rate will lead to gradient descent taking too long to converge, because we are taking very small steps each time. Too large of a learning rate can cause our algorithm to never converge because it will overshoot the minimum each time.</p>
-<p>One important point is that we are repeating this step for multiple variables. If we were to write it out fully, assuming we have 50 features (meaning that <span class="jsonly">
+</noscript>
+ each time. Too small of a learning rate will lead to gradient descent taking too long to converge, because we are taking very small steps each time. Too large of a learning rate can cause our algorithm to never converge because it will overshoot the minimum each time.</p>
+<p>One important point is that we are repeating this step for multiple variables. If we were to write it out fully, assuming we have 50 features (meaning that 
+<span class="jsonly">
                 
     \(x \in \mathbb{R}^{51}\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;x%20%5cin%20%5cmathbb%7bR%7d%5e%7b51%7d" title="x \in \mathbb{R}^{51}" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;x%20%5cin%20%5cmathbb%7bR%7d%5e%7b51%7d" title="x \in \mathbb{R}^{51}" />
   
-</noscript> and <span class="jsonly">
+</noscript>
+ and 
+<span class="jsonly">
                 
     \(\theta \in \mathbb{R}^{51}\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta%20%5cin%20%5cmathbb%7bR%7d%5e%7b51%7d" title="\theta \in \mathbb{R}^{51}" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta%20%5cin%20%5cmathbb%7bR%7d%5e%7b51%7d" title="\theta \in \mathbb{R}^{51}" />
   
-</noscript>):</p>
+</noscript>
+):</p>
+
 <span class="jsonly">
    
     $$\begin{align*} &amp; \text{repeat until convergence \{} \\ &amp; \qquad \theta_0 := \theta_0 - \dfrac{\alpha}{m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})x^{(i)}_0 \\ &amp; \qquad \theta_1 := \theta_1 - \dfrac{\alpha}{m} \sum_{i=1}^m (h_{\theta} (x^{(i)}) - y^{(i)})x^{(i)}_1 \\ &amp; \qquad \theta_2 := \theta_2 - \dfrac{\alpha}{m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})x^{(i)}_2 \\ &amp; \qquad \qquad \vdots \\ &amp; \qquad \theta_{51} := \theta_{51} - \frac{\alpha}{m} \sum_{i=1}^m (h_{\theta} (x^{(i)}) - y^{(i)})x^{(i)}_{51} \\ &amp;\}\end{align*}$$
@@ -842,29 +989,34 @@
 <noscript>
    
     <div style="text-align:center;">
-      <img src="https://latex.codecogs.com/png.latex?%5cbegin%7balign%2a%7d%20%26%20%5ctext%7brepeat%20until%20convergence%20%5c%7b%7d%20%5c%5c%20%26%20%5cqquad%20%5ctheta_0%20%3a%3d%20%5ctheta_0%20-%20%5cdfrac%7b%5calpha%7d%7bm%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29x%5e%7b%28i%29%7d_0%20%5c%5c%20%26%20%5cqquad%20%5ctheta_1%20%3a%3d%20%5ctheta_1%20-%20%5cdfrac%7b%5calpha%7d%7bm%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%20%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29x%5e%7b%28i%29%7d_1%20%5c%5c%20%26%20%5cqquad%20%5ctheta_2%20%3a%3d%20%5ctheta_2%20-%20%5cdfrac%7b%5calpha%7d%7bm%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29x%5e%7b%28i%29%7d_2%20%5c%5c%20%26%20%5cqquad%20%5cqquad%20%5cvdots%20%5c%5c%20%26%20%5cqquad%20%5ctheta_%7b51%7d%20%3a%3d%20%5ctheta_%7b51%7d%20-%20%5cfrac%7b%5calpha%7d%7bm%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%20%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29x%5e%7b%28i%29%7d_%7b51%7d%20%5c%5c%20%26%5c%7d%5cend%7balign%2a%7d" title="\begin{align*} &amp; \text{repeat until convergence \{} \\ &amp; \qquad \theta_0 := \theta_0 - \dfrac{\alpha}{m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})x^{(i)}_0 \\ &amp; \qquad \theta_1 := \theta_1 - \dfrac{\alpha}{m} \sum_{i=1}^m (h_{\theta} (x^{(i)}) - y^{(i)})x^{(i)}_1 \\ &amp; \qquad \theta_2 := \theta_2 - \dfrac{\alpha}{m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})x^{(i)}_2 \\ &amp; \qquad \qquad \vdots \\ &amp; \qquad \theta_{51} := \theta_{51} - \frac{\alpha}{m} \sum_{i=1}^m (h_{\theta} (x^{(i)}) - y^{(i)})x^{(i)}_{51} \\ &amp;\}\end{align*}" />
+      <img src="https://latex.codecogs.com/svg.latex?%5cbegin%7balign%2a%7d%20%26%20%5ctext%7brepeat%20until%20convergence%20%5c%7b%7d%20%5c%5c%20%26%20%5cqquad%20%5ctheta_0%20%3a%3d%20%5ctheta_0%20-%20%5cdfrac%7b%5calpha%7d%7bm%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29x%5e%7b%28i%29%7d_0%20%5c%5c%20%26%20%5cqquad%20%5ctheta_1%20%3a%3d%20%5ctheta_1%20-%20%5cdfrac%7b%5calpha%7d%7bm%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%20%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29x%5e%7b%28i%29%7d_1%20%5c%5c%20%26%20%5cqquad%20%5ctheta_2%20%3a%3d%20%5ctheta_2%20-%20%5cdfrac%7b%5calpha%7d%7bm%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29x%5e%7b%28i%29%7d_2%20%5c%5c%20%26%20%5cqquad%20%5cqquad%20%5cvdots%20%5c%5c%20%26%20%5cqquad%20%5ctheta_%7b51%7d%20%3a%3d%20%5ctheta_%7b51%7d%20-%20%5cfrac%7b%5calpha%7d%7bm%7d%20%5csum_%7bi%3d1%7d%5em%20%28h_%7b%5ctheta%7d%20%28x%5e%7b%28i%29%7d%29%20-%20y%5e%7b%28i%29%7d%29x%5e%7b%28i%29%7d_%7b51%7d%20%5c%5c%20%26%5c%7d%5cend%7balign%2a%7d" title="\begin{align*} &amp; \text{repeat until convergence \{} \\ &amp; \qquad \theta_0 := \theta_0 - \dfrac{\alpha}{m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})x^{(i)}_0 \\ &amp; \qquad \theta_1 := \theta_1 - \dfrac{\alpha}{m} \sum_{i=1}^m (h_{\theta} (x^{(i)}) - y^{(i)})x^{(i)}_1 \\ &amp; \qquad \theta_2 := \theta_2 - \dfrac{\alpha}{m} \sum_{i=1}^m (h_{\theta}(x^{(i)}) - y^{(i)})x^{(i)}_2 \\ &amp; \qquad \qquad \vdots \\ &amp; \qquad \theta_{51} := \theta_{51} - \frac{\alpha}{m} \sum_{i=1}^m (h_{\theta} (x^{(i)}) - y^{(i)})x^{(i)}_{51} \\ &amp;\}\end{align*}" />
     </div>
   
 </noscript>
-<p>Because our <span class="jsonly">
+
+<p>Because our 
+<span class="jsonly">
                 
     \(h_{\theta}(x^{(i)})\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29" title="h_{\theta}(x^{(i)})" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;h_%7b%5ctheta%7d%28x%5e%7b%28i%29%7d%29" title="h_{\theta}(x^{(i)})" />
   
-</noscript> is dependent on the values of the parameter vector <span class="jsonly">
+</noscript>
+ is dependent on the values of the parameter vector 
+<span class="jsonly">
                 
     \(\theta\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta" title="\theta" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta" title="\theta" />
   
-</noscript>, we need to make sure we are updating our values simultaneously after we are done with the computations. Consider the following incorrect psuedocode for a single gradient descent step on a three parameters:</p>
+</noscript>
+, we need to make sure we are updating our values simultaneously after we are done with the computations. Consider the following incorrect psuedocode for a single gradient descent step on a three parameters:</p>
 <pre><code class="language-nil" data-lang="nil"># assume:
 #   theta_0 is the bias term
 #   theta_1 is the 1st parameter, theta_2 is the second parameter, ... etc.
@@ -874,16 +1026,18 @@
 theta_0 = theta_0 - ((alpha / m) * dcost_0)
 theta_1 = theta_1 - ((alpha / m) * dcost_1)
 theta_2 = theta_2 - ((alpha / m) * dcost_2)
-</code></pre><p>This is wrong because we are updating the values before we are finished using all of them yet! Here is a correct implementation, where we update the <span class="jsonly">
+</code></pre><p>This is wrong because we are updating the values before we are finished using all of them yet! Here is a correct implementation, where we update the 
+<span class="jsonly">
                 
     \(\theta\)
   
 </span>
 <noscript>
                 
-    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/png.latex?\inline&space;%5ctheta" title="\theta" />
+    <img style="display:inline;vertical-align:middle;" src="https://latex.codecogs.com/svg.latex?\inline&space;%5ctheta" title="\theta" />
   
-</noscript> values simultaneously after the computation:</p>
+</noscript>
+ values simultaneously after the computation:</p>
 <pre><code class="language-nil" data-lang="nil">temp0 = theta_0 - ((alpha / m) * dcost_0)
 temp1 = theta_1 - ((alpha / m) * dcost_1)
 temp2 = theta_2 - ((alpha / m) * dcost_2)
@@ -901,7 +1055,7 @@ theta_2 = temp2
     </div><footer>
   <div class="container">
     <p class="credits">
-      <a href="https://rayes0.github.ioblog/index.xml">rss</a>
+      <a href="https://rayes0.github.io//blog/index.xml">rss</a>
       
       •
       <a href="https://github.com/rayes0/blog">source</a>
@@ -911,7 +1065,7 @@ theta_2 = temp2
       powered by: <a href="https://gohugo.io/">Hugo</a>, <a href="https://katex.org/">KaTeX</a>
     </p>
     <p class="credits copyright">
-      <a href="https://rayes0.github.ioabout">rayes</a>
+      <a href="https://rayes0.github.io/about">rayes</a>
       &copy;
       2021
     </p>
