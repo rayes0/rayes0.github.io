@@ -8,6 +8,15 @@
     <language>en-ca</language>
     <lastBuildDate>Sun, 08 Aug 2021 12:03:00 -0600</lastBuildDate><atom:link href="https://rayes0.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Tea</title>
+      <link>https://rayes0.github.io/tea/</link>
+      <pubDate>Mon, 16 Aug 2021 00:00:00 -0600</pubDate>
+      
+      <guid>https://rayes0.github.io/tea/</guid>
+      <description>A collection of thoughts, notes, and reviews of loose leaf tea and other water infused beverages that I&amp;rsquo;ve tried, including experimentation on custom blends with herbs, flowers, spices, berries, steeping methods, and roasting. Maybe some content about similar beverages like coffee as well (though I prefer tea over coffee). For each tea, I try to provide a photo of the label with specs like where the tea was grown and various related notes (they&amp;rsquo;ll mostly be in Chinese though).</description>
+    </item>
+    
+    <item>
       <title>Machine Learning (unfinished)</title>
       <link>https://rayes0.github.io/notes/machine-learning/</link>
       <pubDate>Sun, 08 Aug 2021 12:03:00 -0600</pubDate>
@@ -38,9 +47,9 @@ The Handmaid&amp;rsquo;s Tale (Margaret Atwood)
       
       <guid>https://rayes0.github.io/media/in-progress/</guid>
       <description>Tracker for what I&amp;rsquo;m currently reading/watching.
-Books   The Testaments, Margaret Atwood  Light Novels    Toradora [5/9]
+Books   The Testaments, Margaret Atwood    Gulliver&amp;rsquo;s Travels, Jonathan Swift  Light Novels    Toradora [5/9]
   Progress   Vol 1 Vol 2 Vol 3 Vol 4 Vol 5 Vol 6 Vol 7 Vol 8 Vol 9     Manga    Shingeki no Kyojin [27/34]
-  Progress   Vol. 1 Vol. 2 Vol. 3 Vol. 4 Vol. 5 Vol.</description>
+  Progress   Vol. 1 Vol.</description>
     </item>
     
     <item>
@@ -53,7 +62,7 @@ Books   The Testaments, Margaret Atwood  Light Novels    Toradora [5/9]
 Media A collection of things I have read/watched since August 2021. They are generated from my personal media org file with ox-hugo.
   In progress
   Finished
- Books Manga Anime    Notes  Basics of Machine Learning (unfinished)  Other anemoia webnovel (not currently updating, see here)</description>
+ Books Manga Anime    Notes  Basics of Machine Learning (unfinished)  Other  Tea - Thoughts, notes, and reviews about tea and similar beverages anemoia webnovel (not currently updating, see here)  </description>
     </item>
     
     <item>
