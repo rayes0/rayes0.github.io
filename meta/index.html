@@ -73,31 +73,58 @@
 
 		
   <p>Meta page of various links to other content on this site.</p>
-<h2 id="media">Media</h2>
-<p>A collection of things I have read/watched since August 2021. They are generated from my <a href="https://raw.githubusercontent.com/rayes0/blog/master/content-org/media-list.org">personal media org file</a> with <a href="https://ox-hugo.scripter.co/">ox-hugo</a>.</p>
+<h1 id="media">Media</h1>
+<p>A collection of books and shows I have finished reading/watching since the file creation date (August 2021). They are generated from my <a href="https://raw.githubusercontent.com/rayes0/blog/master/content-org/media-list.org">personal media Org mode file</a>.</p>
 <ul>
-<li>
-<p><a href="/media/in-progress">In progress</a></p>
-</li>
-<li>
-<p><a href="/media/finished">Finished</a></p>
+<li><a href="/media">Media</a>
 <ul>
-<li><a href="/media/finished#books">Books</a></li>
-<li><a href="/media/finished#manga">Manga</a></li>
-<li><a href="/media/finished#anime">Anime</a></li>
+<li><a href="/media#books">Books</a></li>
+<li><a href="/media#manga">Manga</a></li>
+<li><a href="/media#anime">Anime</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="notes">Notes</h2>
+<h1 id="notes">Notes</h1>
 <ul>
 <li><a href="/notes/machine-learning">Basics of Machine Learning</a> (unfinished)</li>
 </ul>
-<h2 id="other">Other</h2>
+<h1 id="other">Other</h1>
 <ul>
 <li><a href="/tea">Tea journal</a></li>
-<li><a href="/anemoia/">anemoia webnovel</a> (not currently updating, see <a href="/about/#writing">here</a>)</li>
+<li><a href="/anemoia">anemoia webnovel</a> (not currently updating, see <a href="/about#writing">here</a>)</li>
 </ul>
-
+<h1 id="feeds">Feeds</h1>
+<p>A list of RSS and Atom feeds I am subscribed to. I use newsticker (feed reader built into Emacs) to manage my feeds:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#cb4b16">setq</span> <span style="color:#268bd2">newsticker-url-list</span>
+  &#39;((<span style="color:#2aa198">&#34;LessWrong&#34;</span> <span style="color:#2aa198">&#34;https://www.lesswrong.com/feed.xml?view=community-rss&amp;karmaThreshold=45&#34;</span>)
+     (<span style="color:#2aa198">&#34;Astral Codex Ten&#34;</span> <span style="color:#2aa198">&#34;https://astralcodexten.substack.com/feed&#34;</span>)
+     (<span style="color:#2aa198">&#34;Fantastic Anachronism&#34;</span> <span style="color:#2aa198">&#34;https://fantasticanachronism.com/atom.xml&#34;</span>)
+     (<span style="color:#2aa198">&#34;Protesilaos Blog&#34;</span> <span style="color:#2aa198">&#34;https://protesilaos.com/master.xml&#34;</span>)
+     (<span style="color:#2aa198">&#34;Gwern.net Newsletter&#34;</span> <span style="color:#2aa198">&#34;https://gwern.substack.com/feed&#34;</span> <span style="color:#268bd2">nil</span> <span style="color:#2aa198;font-weight:bold">86400</span>)
+     (<span style="color:#2aa198">&#34;For me, in full bloom&#34;</span> <span style="color:#2aa198">&#34;https://formeinfullbloom.wordpress.com/feed/&#34;</span> <span style="color:#268bd2">nil</span> <span style="color:#2aa198;font-weight:bold">86400</span>)
+     (<span style="color:#2aa198">&#34;Therefore it is&#34;</span> <span style="color:#2aa198">&#34;https://thereforeitis.wordpress.com/feed&#34;</span> <span style="color:#268bd2">nil</span> <span style="color:#2aa198;font-weight:bold">86400</span>)
+     (<span style="color:#2aa198">&#34;Wrong Every Time&#34;</span> <span style="color:#2aa198">&#34;https://wrongeverytime.com/feed&#34;</span> <span style="color:#268bd2">nil</span> <span style="color:#2aa198;font-weight:bold">86400</span>)
+     (<span style="color:#2aa198">&#34;R Weekly&#34;</span> <span style="color:#2aa198">&#34;https://rweekly.org/atom.xml&#34;</span> <span style="color:#268bd2">nil</span> <span style="color:#2aa198;font-weight:bold">86400</span>)
+     (<span style="color:#2aa198">&#34;SE (Hot)&#34;</span> <span style="color:#2aa198">&#34;https://stackexchange.com/feeds/questions&#34;</span>)
+     (<span style="color:#2aa198">&#34;SE (Linguistics)&#34;</span> <span style="color:#2aa198">&#34;https://linguistics.stackexchange.com/feeds/hot&#34;</span>)
+     (<span style="color:#2aa198">&#34;SE (Psychology)&#34;</span> <span style="color:#2aa198">&#34;https://psychology.stackexchange.com/feeds/hot&#34;</span>)
+     (<span style="color:#2aa198">&#34;SE (Animanga)&#34;</span> <span style="color:#2aa198">&#34;https://anime.stackexchange.com/feeds/hot&#34;</span>)
+     (<span style="color:#2aa198">&#34;SE (SciFi)&#34;</span> <span style="color:#2aa198">&#34;https://scifi.stackexchange.com/feeds/hot&#34;</span>)
+     (<span style="color:#2aa198">&#34;SE (Stats)&#34;</span> <span style="color:#2aa198">&#34;https://stats.stackexchange.com/feeds/hot&#34;</span>)
+     (<span style="color:#2aa198">&#34;SE (Music)&#34;</span> <span style="color:#2aa198">&#34;https://music.stackexchange.com/feeds/hot&#34;</span>)
+     (<span style="color:#2aa198">&#34;SE (Unix)&#34;</span> <span style="color:#2aa198">&#34;https://unix.stackexchange.com/feeds/hot&#34;</span>)
+     (<span style="color:#2aa198">&#34;SE (Skeptics)&#34;</span> <span style="color:#2aa198">&#34;https://skeptics.stackexchange.com/feeds/hot&#34;</span>)
+     (<span style="color:#2aa198">&#34;SE (Bioinformatics)&#34;</span> <span style="color:#2aa198">&#34;https://bioinformatics.stackexchange.com/feeds/hot&#34;</span>)
+     (<span style="color:#2aa198">&#34;SE (Biblical Hermeneutics)&#34;</span> <span style="color:#2aa198">&#34;https://hermeneutics.stackexchange.com/feeds/hot&#34;</span>)
+     (<span style="color:#2aa198">&#34;XKCD&#34;</span> <span style="color:#2aa198">&#34;https://xkcd.com/rss.xml&#34;</span>)
+     (<span style="color:#2aa198">&#34;Protesilaos&#34;</span> <span style="color:#2aa198">&#34;https://invidious.kavin.rocks/feed/channel/UC0uTPqBCFIpZxlz_Lv1tk_g&#34;</span> <span style="color:#268bd2">nil</span> <span style="color:#2aa198;font-weight:bold">86400</span>)
+     (<span style="color:#2aa198">&#34;Cateen&#34;</span> <span style="color:#2aa198">&#34;https://invidious.kavin.rocks/feed/channel/UC_QG8miwKHFNuWY9VpkrI8w&#34;</span> <span style="color:#268bd2">nil</span> <span style="color:#2aa198;font-weight:bold">86400</span>)
+     (<span style="color:#2aa198">&#34;Animenz&#34;</span> <span style="color:#2aa198">&#34;https://invidious.kavin.rocks/feed/channel/UCyW-leqPXUunrXXxFjpZ7VA&#34;</span> <span style="color:#268bd2">nil</span> <span style="color:#2aa198;font-weight:bold">86400</span>)
+     (<span style="color:#2aa198">&#34;Kyle Landry&#34;</span> <span style="color:#2aa198">&#34;https://invidious.kavin.rocks/feed/channel/UCk0UErv9b4Hn5ucNNjqD1UQ&#34;</span> <span style="color:#268bd2">nil</span> <span style="color:#2aa198;font-weight:bold">86400</span>)
+     (<span style="color:#2aa198">&#34;Kayou&#34;</span> <span style="color:#2aa198">&#34;https://invidious.kavin.rocks/feed/channel/UCk2g7q-RY455IuRWCIJ0bmw&#34;</span> <span style="color:#268bd2">nil</span> <span style="color:#2aa198;font-weight:bold">86400</span>)
+     (<span style="color:#2aa198">&#34;Halcyon&#34;</span> <span style="color:#2aa198">&#34;https://invidious.kavin.rocks/feed/channel/UC8tyyA-UIbefEexcLatHmUQ&#34;</span> <span style="color:#268bd2">nil</span> <span style="color:#2aa198;font-weight:bold">86400</span>)
+     (<span style="color:#2aa198">&#34;SLS&#34;</span> <span style="color:#2aa198">&#34;https://invidious.kavin.rocks/feed/channel/UCmKy7mz6tRLv7OFdSqbAkrg&#34;</span> <span style="color:#268bd2">nil</span> <span style="color:#2aa198;font-weight:bold">86400</span>)))
+</code></pre></div>
 
 
 

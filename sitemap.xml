@@ -23,26 +23,6 @@
   </url>
   
   <url>
-    <loc>https://rayes0.github.io/media/finished/</loc>
-    <lastmod>2021-08-20T21:46:04-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rayes0.github.io/media/in-progress/</loc>
-    <lastmod>2021-08-21T10:42:33-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rayes0.github.io/media/</loc>
-    <lastmod>2021-08-21T10:42:33-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rayes0.github.io/meta/</loc>
-    <lastmod>2021-08-20T21:46:04-06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://rayes0.github.io/categories/ai/</loc>
     <lastmod>2021-08-08T19:43:10-06:00</lastmod>
   </url>
@@ -60,6 +40,11 @@
   <url>
     <loc>https://rayes0.github.io/tags/intelligence/</loc>
     <lastmod>2021-08-08T19:43:10-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rayes0.github.io/media/</loc>
+    <lastmod>2021-07-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -83,8 +68,13 @@
   </url>
   
   <url>
-    <loc>https://rayes0.github.io/blog/consiousness/</loc>
+    <loc>https://rayes0.github.io/blog/consciousness/</loc>
     <lastmod>2021-08-08T19:43:10-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rayes0.github.io/meta/</loc>
+    <lastmod>2021-08-20T21:46:04-06:00</lastmod>
   </url>
   
   <url>
@@ -128,17 +118,22 @@
   </url>
   
   <url>
+    <loc>https://rayes0.github.io/tags/flower-language/</loc>
+    <lastmod>2021-08-22T12:14:41-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rayes0.github.io/blog/hyouka/</loc>
+    <lastmod>2021-08-22T12:14:41-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rayes0.github.io/tags/light-novels/</loc>
     <lastmod>2021-08-22T12:14:41-06:00</lastmod>
   </url>
   
   <url>
     <loc>https://rayes0.github.io/tags/personality/</loc>
-    <lastmod>2021-08-22T12:14:41-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rayes0.github.io/blog/hyouka/</loc>
     <lastmod>2021-08-22T12:14:41-06:00</lastmod>
   </url>
   
