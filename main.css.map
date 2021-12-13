@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/home/rayes/sites/personal-site",
+	"sourceRoot": "/home/runner/work/blog/blog",
 	"sources": [
 		"themes/tex-like/assets/scss/main.scss",
 		"themes/tex-like/assets/scss/_fonts.scss",
